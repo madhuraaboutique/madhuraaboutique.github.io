@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="description" content="Browse our premium product catalog — search, filter, and inquire via WhatsApp.">
-<title>Product Catalog | Boutique</title>
+<meta name="description" content="Browse Mg Madhuraa Boutique's premium product catalog — search, filter, and inquire via WhatsApp.">
+<title>Mg Madhuraa Boutique | Catalog</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -171,7 +171,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 <body>
 
 <nav class="topnav">
-  <div class="brand" id="nbrand">Boutique<small id="ntag">Elevating Style</small></div>
+  <div class="brand" id="nbrand">Mg Madhuraa Boutique<small id="ntag">Elegance Redefined</small></div>
   <div class="srchwrap">
     <span class="si">🔍</span>
     <input type="search" id="sinput" placeholder="Search products, styles, or IDs..." autocomplete="off">
@@ -190,7 +190,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 
 <footer class="ftr">
   <div class="fgrid">
-    <div><div class="fbn" id="fbn">Boutique</div><p class="ftg" id="ftg"></p></div>
+    <div><div class="fbn" id="fbn">Mg Madhuraa Boutique</div><p class="ftg" id="ftg">Elegance Redefined</p></div>
     <div class="fcol">
       <h5>Stay Connected</h5>
       <p id="fph"></p><p id="fwa"></p><p id="fig"></p>
@@ -201,7 +201,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       <a href="#" onclick="C.openIQ();return false">Your Basket</a>
     </div>
   </div>
-  <div class="fbot">© <span id="fyr"></span> <span id="fcopy">Boutique</span>. Created with Boutique Manager ⚡</div>
+  <div class="fbot">© <span id="fyr"></span> <span id="fcopy">Mg Madhuraa Boutique</span>. All rights reserved ⚡</div>
 </footer>
 
 <!-- Inquiry Basket -->
@@ -273,7 +273,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       const safetyTimer = setTimeout(() => {
         const g = document.getElementById('pgrid');
         if (g && g.querySelector('.spinner')) {
-          g.innerHTML = `<div class="state"><h3>⚠️ Shop Not Published Yet</h3><p>Open the <b>Admin Panel</b> (index.html) → <b>🌐 Online Store</b> → click <b>👁️ Preview Local Shop</b>.</p></div>`;
+          g.innerHTML = this._noDataMsg();
         }
       }, 5000);
 
@@ -301,11 +301,30 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 
         // 3. Nothing loaded — show clear message
         clearTimeout(safetyTimer);
-        document.getElementById('pgrid').innerHTML = `<div class="state"><h3>⚠️ Shop Not Published Yet</h3><p>Open the <b>Admin Panel</b> (index.html) → <b>🌐 Online Store</b> → click <b>👁️ Preview Local Shop</b>.</p></div>`;
+        document.getElementById('pgrid').innerHTML = this._noDataMsg();
       } catch(err) {
         clearTimeout(safetyTimer);
-        document.getElementById('pgrid').innerHTML = `<div class="state"><h3>⚠️ Shop Not Published Yet</h3><p>Open the <b>Admin Panel</b> (index.html) → <b>🌐 Online Store</b> → click <b>👁️ Preview Local Shop</b>.</p></div>`;
+        document.getElementById('pgrid').innerHTML = this._noDataMsg();
       }
+    },
+
+    // Smart error message: different instruction for GitHub Pages vs local
+    _noDataMsg() {
+      const isGitHub = location.hostname.includes('github.io') || location.hostname.includes('github.com');
+      if (isGitHub) {
+        return `<div class="state">
+          <h3>⚠️ Products Not Uploaded Yet</h3>
+          <p>The catalog data is missing. To fix this:</p>
+          <ol style="text-align:left;display:inline-block;margin-top:12px;line-height:2">
+            <li>Open <b>index.html</b> in your Admin Panel</li>
+            <li>Go to <b>🌐 Online Store</b> → click <b>🚀 Publish Catalog</b></li>
+            <li>Save the downloaded <b>products.json</b></li>
+            <li>Upload it to your GitHub repo in the <b>data/</b> folder</li>
+            <li>Wait ~1 min, then refresh this page</li>
+          </ol>
+        </div>`;
+      }
+      return `<div class="state"><h3>⚠️ Shop Not Published Yet</h3><p>Open the <b>Admin Panel</b> (index.html) → <b>🌐 Online Store</b> → click <b>👁️ Preview Local Shop</b>.</p></div>`;
     },
 
     // Read products + categories + settings directly from the app's IndexedDB
