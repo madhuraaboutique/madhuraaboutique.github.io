@@ -481,7 +481,9 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       
       const gall = photos[0] ? `<img src="${photos[0].data}" id="dimg" class="mimg">` : `<div class="mph">👗</div>`;
       const thumbs = photos.length>1 ? `<div class="thumbrow">${photos.map((ph,i)=>`<img src="${ph.data}" class="thumb${i===0?' active':''}" onclick="C.setImg(this)">`).join('')}</div>` : '';
-      const szH = sizes.length ? sizes.map(s=>`<span class="sz">${e(s)}</span>`).join('') : `<span class="sz" style="opacity:0.6">Contact for sizes</span>`;
+      const szH = sizes.length
+        ? sizes.map(s=>`<span class="sz" onclick="C.selSz(this,'${e(s)}')" style="cursor:pointer">${e(s)}</span>`).join('')
+        : `<span class="sz" style="opacity:0.6">Contact for sizes</span>`;
       const clH = cols.length ? `<div class="colorlist">${cols.map(c=>`<span class="ctag"><span class="cdotl" style="background:${clr(c)}"></span>${e(c)}</span>`).join('')}</div>` : '';
 
       m.innerHTML = `<div class="modal lg">
@@ -500,9 +502,13 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
               </div>
               ${p.description ? `<p class="ddesc">${e(p.description)}</p>` : ''}
               ${cols.length ? `<div><div class="sec-t">Available Colors</div>${clH}</div>` : ''}
-              <div><div class="sec-t">Available Sizes</div><div class="szrow">${szH}</div></div>
+              <div>
+                <div class="sec-t">Available Sizes</div>
+                <div class="szrow" id="szrow-${p.id}">${szH}</div>
+                <div id="sz-err" style="display:none;font-size:0.78rem;color:var(--err);font-weight:700;margin-top:8px;animation:none;">⚠️ Please select a size to continue</div>
+              </div>
               <div class="dacts">
-                <button class="btn btn-p" onclick="C.addIQ('${p.id}')">🛒 Add to Basket</button>
+                <button class="btn btn-p" onclick="C.addIQ('${p.id}')" id="btn-add-${p.id}">🛒 Add to Basket</button>
                 <button class="btn btn-wa" onclick="C.directWA('${p.id}')">WhatsApp 💬</button>
               </div>
             </div>
@@ -516,16 +522,39 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       document.querySelectorAll('.thumb').forEach(x=>x.classList.remove('active'));
       t.classList.add('active');
     },
+    // Select a size in the detail modal
+    selSz(el, sz) {
+      document.querySelectorAll('#det-m .sz').forEach(x=>x.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('det-m').dataset.sz = sz;
+      const err = document.getElementById('sz-err');
+      if (err) err.style.display = 'none';
+    },
     closeM(id) { document.getElementById(id).classList.remove('open'); },
     loadIQ() { try { const s=localStorage.getItem('bq_bask'); if(s)this.iq=JSON.parse(s); }catch(e){} this.uFAB(); },
     svIQ() { try { localStorage.setItem('bq_bask',JSON.stringify(this.iq)); }catch(e){} this.uFAB(); },
     addIQ(id) {
       const p = AP.find(x=>x.id===id); if(!p)return;
-      if(!this.iq.some(x=>x.id===id)) {
-        this.iq.push({id:p.id, name:p.name, code:getRawIdForWA(p), price:minP(p), photo:p.photos?.[0]?.data});
-        this.svIQ(); toast('✅ Added to Basket');
+      const m = document.getElementById('det-m');
+      const sz = m.dataset.sz || '';
+      // Check if this product has available sizes — if yes, size must be selected
+      const availSizes = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).filter(s=>+s.stock>0).map(s=>s.size)))];
+      if (availSizes.length > 0 && !sz) {
+        const err = document.getElementById('sz-err');
+        if (err) { err.style.display='block'; err.style.animation='none'; void err.offsetWidth; err.style.animation='tin 0.4s ease'; }
+        const row = document.querySelector('#det-m .szrow');
+        if (row) { row.style.animation='none'; void row.offsetWidth; row.style.outline='2px solid var(--err)'; row.style.borderRadius='8px'; setTimeout(()=>row.style.outline='',1500); }
+        toast('👆 Please select a size first!');
+        return;
+      }
+      const key = p.id + (sz ? '|' + sz : '');
+      if (!this.iq.some(x=>x.id===key)) {
+        this.iq.push({id:key, pid:p.id, name:p.name, size:sz, code:getRawIdForWA(p), price:minP(p), photo:p.photos?.[0]?.data});
+        this.svIQ(); toast('✅ Added to Basket — Size ' + (sz||'N/A'));
+        // Reset size selection for next open
+        delete m.dataset.sz;
         this.closeM('det-m');
-      } else toast('Already in basket!');
+      } else toast('Already in basket with this size!');
     },
     rmIQ(id) { this.iq=this.iq.filter(x=>x.id!==id); this.svIQ(); this.renderIQ(); },
     clearIQ() { this.iq=[]; this.svIQ(); this.closeM('iq-m'); },
@@ -541,8 +570,8 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
           ${i.photo ? `<img src="${i.photo}" class="iqth">` : `<div class="iqth" style="background:#111"></div>`}
           <div class="iqinfo">
             <div class="iqname">${e(i.name)}</div>
-            <div class="iqcode">Code: ${e(i.code)}</div>
-            <div style="font-weight:800;color:var(--acc);margin-top:4px;">${i.price ? '₹'+i.price.toLocaleString('en-IN') : '--'}</div>
+            <div class="iqcode">Code: ${e(i.code)}${i.size ? ` &nbsp;·&nbsp; <span style="background:var(--acc);color:#fff;padding:2px 8px;border-radius:6px;font-size:0.7rem;font-weight:800;">${e(i.size)}</span>` : ''}</div>
+            <div style="font-weight:800;color:var(--acc);margin-top:4px;">${i.price ? '&#8377;'+i.price.toLocaleString('en-IN') : '--'}</div>
           </div>
           <button class="iqrm" onclick="C.rmIQ('${i.id}')">✕</button>
         </div>`).join('');
@@ -558,21 +587,29 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
     sendWA() {
       if(!this.iq.length) return;
       const ph = this._waPhone();
-      let msg = '*Basket Inquiry* \uD83D\uDED2\n\nHello,\nI\'m interested in:\n\n';
+      let msg = '*Basket Inquiry* \uD83D\uDED2\n\nHello!\nI am interested in the following items:\n\n';
       this.iq.forEach(i => {
-        msg += '\uD83D\uDCE6 *' + i.name + '*\n\uD83C\uDFF7\uFE0F ID Code: *' + i.code + '*\n\n';
+        msg += '\uD83D\uDCE6 *' + i.name + '*\n';
+        msg += '\uD83C\uDFF7\uFE0F ID: *' + i.code + '*\n';
+        if (i.size) msg += '\uD83D\uDCCF Size: *' + i.size + '*\n';
+        msg += '\n';
       });
-      msg += 'Please confirm availability/sizes.\n_Using IDs above to quickly check catalog._';
+      msg += 'Please confirm availability and pricing.\n_Thank you!_';
       window.open((ph ? 'https://wa.me/' + ph : 'https://wa.me/') + '?text=' + encodeURIComponent(msg), '_blank');
     },
     directWA(id) {
       const p = AP.find(x=>x.id===id); if(!p)return;
       const ph = this._waPhone();
       const pid = getRawIdForWA(p);
-      const sizes = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).filter(s=>s.stock>0).map(s=>s.size)))];
-      let msg = '*Product Inquiry* \uD83D\uDED2\n\nHello,\nIs this product available?\n\n\uD83D\uDCE6 *' + p.name + '*\n\uD83C\uDFF7\uFE0F ID Code: *' + pid + '*\n';
-      if (sizes.length) msg += 'Available Sizes shown: ' + sizes.join(', ') + '\n';
-      msg += '\n_Using ID above for quick lookup._';
+      const m = document.getElementById('det-m');
+      const selSz = m ? m.dataset.sz : '';
+      const availSizes = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).filter(s=>s.stock>0).map(s=>s.size)))];
+      let msg = '*Product Inquiry* \uD83D\uDED2\n\nHello!\nI am interested in this product:\n\n';
+      msg += '\uD83D\uDCE6 *' + p.name + '*\n';
+      msg += '\uD83C\uDFF7\uFE0F ID: *' + pid + '*\n';
+      if (selSz) msg += '\uD83D\uDCCF Size: *' + selSz + '*\n';
+      else if (availSizes.length) msg += '\uD83D\uDCCF Available Sizes: ' + availSizes.join(', ') + '\n';
+      msg += '\nIs this available? Please confirm price and stock.\n_Thank you!_';
       window.open((ph ? 'https://wa.me/' + ph : 'https://wa.me/') + '?text=' + encodeURIComponent(msg), '_blank');
     },
     bind() {
