@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="description" content="Browse Mg Madhuraa Boutique's premium product catalog — search, filter, and inquire via WhatsApp.">
+<meta name="description" content="Browse Mg Madhuraa Boutique's premium product catalog â€” search, filter, and inquire via WhatsApp.">
 <title>Mg Madhuraa Boutique | Catalog</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 ::-webkit-scrollbar-thumb { background: var(--muted); border-radius: var(--rf); }
 ::-webkit-scrollbar-thumb:hover { background: var(--txt2); }
 
-/* ═══ NAVBAR (Premium Glassmorphism) ═══ */
+/* â•â•â• NAVBAR (Premium Glassmorphism) â•â•â• */
 .topnav{position:sticky;top:0;z-index:200;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;gap:15px;background:rgba(9,9,11,0.8);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--bdr);}
 .brand{font-size:1.4rem;font-weight:800;background:linear-gradient(to right,#fff,var(--acc2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap;flex-shrink:0;line-height:1.1;letter-spacing:-0.5px;}
 .brand small{display:block;font-size:0.65rem;-webkit-text-fill-color:var(--txt2);font-weight:500;letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
@@ -40,15 +40,15 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
   .fab { flex-shrink: 0; }
 }
 
-/* ═══ CATEGORY BAR ═══ */
+/* â•â•â• CATEGORY BAR â•â•â• */
 .catbar{position:sticky;top:70px;z-index:190;background:rgba(9,9,11,0.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr);padding:12px 20px;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
-@media(max-width: 600px) { .catbar { top: 120px; } }
+@media(max-width:600px){.catbar{top:120px;}}
 .catbar::-webkit-scrollbar{display:none}
 .cbtn{flex-shrink:0;padding:8px 18px;background:var(--bg2);border:1px solid var(--bdr);border-radius:var(--rf);color:var(--txt2);font-size:0.85rem;font-weight:600;font-family:inherit;cursor:pointer;transition:var(--tr);white-space:nowrap;display:flex;align-items:center;gap:6px;}
 .cbtn:hover{border-color:var(--acc);color:var(--txt);background:rgba(99,102,241,0.1);}
 .cbtn.active{background:linear-gradient(135deg,var(--acc),#818cf8);color:#fff;border-color:transparent;box-shadow:0 4px 12px var(--glow)}
 
-/* ═══ MAIN & GRID ═══ */
+/* â•â•â• MAIN & GRID â•â•â• */
 .main{padding:24px 20px 80px; max-width: 1600px; margin: 0 auto;}
 .pbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
 .pcnt{font-size:0.9rem;color:var(--txt2);font-weight:500;letter-spacing:0.5px;}
@@ -57,7 +57,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));gap:24px}
 @media(max-width: 500px) { .pgrid{grid-template-columns:repeat(2, 1fr);gap:12px} }
 
-/* ═══ PREMIUM PRODUCT CARD ═══ */
+/* â•â•â• PREMIUM PRODUCT CARD â•â•â• */
 .pcard{background:var(--card);border-radius:var(--r2);overflow:hidden;border:1px solid var(--bdr);transition:var(--tr);cursor:pointer;position:relative;display:flex;flex-direction:column;}
 .pcard:hover{transform:translateY(-6px);border-color:var(--bdr2);box-shadow:var(--sh);}
 /* Image Area */
@@ -84,7 +84,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 .pftr{display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto;}
 .pprice{font-size:1.2rem;font-weight:800;color:#fff;letter-spacing:0.5px;}
 
-/* ═══ MODALS & OVERLAYS ═══ */
+/* â•â•â• MODALS & OVERLAYS â•â•â• */
 .mover{position:fixed;inset:0;background:rgba(0,0,0,0.9);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;overscroll-behavior:contain;opacity:0;transition:opacity 0.3s ease;}
 .mover.open{display:flex;opacity:1;}
 .modal{background:var(--card);width:100%;border-radius:24px;border:1px solid var(--bdr);overflow:hidden;max-height:90vh;display:flex;flex-direction:column;transform:scale(0.95) translateY(20px);transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 25px 50px -12px rgba(0,0,0,0.8);}
@@ -166,6 +166,54 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 .fcol p,.fcol a{color:var(--txt2);font-size:0.9rem;margin-bottom:10px;display:block;text-decoration:none;transition:var(--tr);font-weight:500;}
 .fcol a:hover{color:#fff;transform:translateX(5px);}
 .fbot{text-align:center;color:var(--txt2);font-size:0.8rem;margin-top:60px;padding-top:24px;border-top:1px solid var(--bdr);font-weight:600;}
+
+/* ═══ FILTER SYSTEM ═══ */
+.filterbar{background:rgba(9,9,11,0.97);border-bottom:1px solid var(--bdr);padding:10px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:sticky;top:119px;z-index:180;}
+@media(max-width:600px){.filterbar{top:168px;}}
+.fbtn{display:flex;align-items:center;gap:6px;padding:7px 14px;background:var(--bg2);border:1px solid var(--bdr);border-radius:var(--rf);color:var(--txt2);font-size:0.82rem;font-weight:700;cursor:pointer;transition:var(--tr);font-family:inherit;white-space:nowrap;}
+.fbtn:hover{border-color:var(--acc);color:var(--txt);}
+.fbtn.on{background:rgba(99,102,241,0.15);border-color:var(--acc);color:#fff;}
+.fbadge2{background:var(--acc);color:#fff;font-size:0.65rem;font-weight:800;padding:1px 6px;border-radius:var(--rf);min-width:18px;text-align:center;}
+.fchip{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:rgba(99,102,241,0.12);border:1px solid rgba(99,102,241,0.3);border-radius:var(--rf);font-size:0.78rem;font-weight:700;color:var(--acc);cursor:pointer;transition:var(--tr);}
+.fchip .fx{margin-left:2px;opacity:0.7;font-size:0.75rem;}
+.fchip:hover .fx{opacity:1;color:var(--err);}
+.fclear{padding:6px 12px;background:transparent;border:1px solid rgba(244,63,94,0.3);border-radius:var(--rf);color:var(--err);font-size:0.8rem;font-weight:700;cursor:pointer;transition:var(--tr);font-family:inherit;}
+.fclear:hover{background:rgba(244,63,94,0.1);border-color:var(--err);}
+.sort-sel{padding:7px 12px;background:var(--bg2);border:1px solid var(--bdr);border-radius:var(--rf);color:var(--txt);font-size:0.82rem;font-weight:600;cursor:pointer;font-family:inherit;outline:none;transition:var(--tr);}
+.sort-sel:focus{border-color:var(--acc);}
+
+/* Filter Drawer */
+.fdrawer{background:var(--bg2);border:1px solid var(--bdr);border-radius:16px;padding:20px;margin:0 20px 0;display:none;box-shadow:0 10px 40px rgba(0,0,0,0.5);}
+.fdrawer.open{display:block;animation:tin 0.25s ease;}
+.fgroup{margin-bottom:18px;}
+.fgroup:last-child{margin-bottom:0;}
+.fglabel{font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--acc);font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.fchips{display:flex;flex-wrap:wrap;gap:8px;}
+.fopt{padding:6px 14px;background:rgba(255,255,255,0.04);border:1px solid var(--bdr);border-radius:var(--rf);font-size:0.82rem;font-weight:600;color:var(--txt2);cursor:pointer;transition:var(--tr);font-family:inherit;display:flex;align-items:center;gap:6px;}
+.fopt:hover{border-color:var(--acc);color:var(--txt);}
+.fopt.sel{background:rgba(99,102,241,0.15);border-color:var(--acc);color:#fff;}
+.cdot-f{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,0.2);flex-shrink:0;}
+.pr-row{display:flex;gap:12px;align-items:center;}
+.pr-inp{width:110px;padding:8px 12px;background:rgba(255,255,255,0.05);border:1px solid var(--bdr);border-radius:var(--r);color:var(--txt);font-size:0.88rem;font-family:inherit;outline:none;transition:var(--tr);}
+.pr-inp:focus{border-color:var(--acc);}
+.avail-toggle{display:flex;gap:8px;}
+.avbtn{padding:7px 18px;background:rgba(255,255,255,0.04);border:1px solid var(--bdr);border-radius:var(--rf);font-size:0.82rem;font-weight:700;cursor:pointer;transition:var(--tr);font-family:inherit;color:var(--txt2);}
+.avbtn.sel{background:rgba(16,185,129,0.15);border-color:var(--ok);color:var(--ok);}
+.avbtn.sel-so{background:rgba(244,63,94,0.1);border-color:var(--err);color:var(--err);}
+.fdivider{height:1px;background:var(--bdr);margin:16px 0;}
+
+/* Share Button Row */
+.share-row{display:flex;gap:10px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--bdr);margin-top:8px;}
+.share-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:var(--rf);font-size:0.8rem;font-weight:700;cursor:pointer;transition:var(--tr);border:1px solid var(--bdr);font-family:inherit;background:var(--bg2);color:var(--txt2);text-decoration:none;}
+.share-btn:hover{transform:translateY(-2px);border-color:var(--acc);color:#fff;}
+.share-btn.wa{background:rgba(37,211,102,0.1);border-color:rgba(37,211,102,0.3);color:#25d366;}
+.share-btn.wa:hover{background:#25d366;color:#fff;border-color:#25d366;}
+.share-btn.fb{background:rgba(24,119,242,0.1);border-color:rgba(24,119,242,0.3);color:#1877f2;}
+.share-btn.fb:hover{background:#1877f2;color:#fff;border-color:#1877f2;}
+.share-btn.copy{background:rgba(99,102,241,0.1);border-color:rgba(99,102,241,0.3);color:var(--acc);}
+.share-btn.copy:hover{background:var(--acc);color:#fff;}
+.share-btn.tw{background:rgba(0,0,0,0.3);border-color:rgba(255,255,255,0.15);color:#fff;}
+.share-btn.tw:hover{background:#000;border-color:#fff;}
 </style>
 </head>
 <body>
@@ -173,15 +221,34 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 <nav class="topnav">
   <div class="brand" id="nbrand">Mg Madhuraa Boutique<small id="ntag">Elegance Redefined</small></div>
   <div class="srchwrap">
-    <span class="si">🔍</span>
+    <span class="si">ðŸ”</span>
     <input type="search" id="sinput" placeholder="Search products, styles, or IDs..." autocomplete="off">
   </div>
-  <button class="fab hide" id="fab">🛒 Basket <span class="fbadge" id="fcnt">0</span></button>
+  <button class="fab hide" id="fab">🛍️ Basket <span class="fbadge" id="fcnt">0</span></button>
 </nav>
 
 <div class="catbar" id="catbar">
   <button class="cbtn active" data-cat="all">✨ All Collection</button>
 </div>
+
+<!-- ═══ FILTER BAR ═══ -->
+<div class="filterbar" id="filterbar">
+  <button class="fbtn" id="filter-toggle" onclick="C.toggleFilters()">
+    🎛️ Filters <span class="fbadge2" id="factive-cnt" style="display:none">0</span>
+  </button>
+  <div style="width:1px;height:20px;background:var(--bdr);flex-shrink:0;"></div>
+  <select class="sort-sel" id="sort-sel" onchange="C.setSort(this.value)">
+    <option value="">Sort: Default</option>
+    <option value="name-az">Name A → Z</option>
+    <option value="name-za">Name Z → A</option>
+    <option value="price-asc">Price: Low → High</option>
+    <option value="price-desc">Price: High → Low</option>
+    <option value="newest">Newest First</option>
+  </select>
+  <div id="active-chips" style="display:flex;gap:8px;flex-wrap:wrap;flex:1;"></div>
+  <button class="fclear" id="clear-all-btn" onclick="C.clearFilters()" style="display:none">✕ Clear All</button>
+</div>
+<div class="fdrawer" id="fdrawer"></div>
 
 <div class="main">
   <div class="pbar"><div class="pcnt" id="pcnt"></div></div>
@@ -207,7 +274,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 <!-- Inquiry Basket -->
 <div class="mover" id="iq-m">
   <div class="modal sm">
-    <div class="mhdr"><h3>🛒 Your Basket</h3><button class="mclose" onclick="C.closeM('iq-m')">✕</button></div>
+    <div class="mhdr"><h3>🛍️ Your Basket</h3><button class="mclose" onclick="C.closeM('iq-m')">✕</button></div>
     <div class="mbody" id="iq-body"></div>
     <div class="mftr">
       <button class="btn btn-s" onclick="C.clearIQ()">Clear</button>
@@ -254,6 +321,10 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 
   const C = {
     cat: 'all', q: '', iq: [], _t: null,
+    filters: { sizes:[], colors:[], minPrice:'', maxPrice:'', avail:'all' },
+    sort: '',
+    _fopen: false,
+
     async init() {
       document.getElementById('fyr').textContent = new Date().getFullYear();
       if (D) { this.setup(D); return; }
@@ -448,13 +519,102 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
         };
       });
     },
+    buildFilters() {
+      // Collect all unique sizes/colors from live data
+      const allSizes = [...new Set(AP.flatMap(p=>(p.variants||[]).flatMap(v=>(v.sizes||[]).map(s=>s.size))).filter(Boolean))].sort();
+      const allColors = [...new Set(AP.flatMap(p=>(p.variants||[]).map(v=>v.color)).filter(Boolean))].sort();
+      const drawer = document.getElementById('fdrawer');
+      drawer.innerHTML = `
+        <div class="fgroup">
+          <div class="fglabel">📐 Size</div>
+          <div class="fchips" id="f-sizes">
+            ${allSizes.length ? allSizes.map(s=>`<button class="fopt${this.filters.sizes.includes(s)?' sel':''}" onclick="C.toggleFSize('${e(s)}')">${e(s)}</button>`).join('') : '<span style="color:var(--txt2);font-size:0.82rem;">No size data</span>'}
+          </div>
+        </div>
+        ${allColors.length ? `
+        <div class="fdivider"></div>
+        <div class="fgroup">
+          <div class="fglabel">🎨 Color</div>
+          <div class="fchips" id="f-colors">
+            ${allColors.map(c=>`<button class="fopt${this.filters.colors.includes(c)?' sel':''}" onclick="C.toggleFColor('${e(c)}')">
+              <span class="cdot-f" style="background:${clr(c)}"></span>${e(c)}
+            </button>`).join('')}
+          </div>
+        </div>` : ''}
+        <div class="fdivider"></div>
+        <div class="fgroup">
+          <div class="fglabel">💰 Price Range (₹)</div>
+          <div class="pr-row">
+            <input class="pr-inp" type="number" id="f-minp" placeholder="Min" value="${this.filters.minPrice}" min="0" onchange="C.filters.minPrice=this.value;C.renderGrid();C.updateFilterUI()">
+            <span style="color:var(--txt2);font-weight:700;">—</span>
+            <input class="pr-inp" type="number" id="f-maxp" placeholder="Max" value="${this.filters.maxPrice}" min="0" onchange="C.filters.maxPrice=this.value;C.renderGrid();C.updateFilterUI()">
+          </div>
+        </div>
+        <div class="fdivider"></div>
+        <div class="fgroup">
+          <div class="fglabel">✅ Availability</div>
+          <div class="avail-toggle">
+            <button class="avbtn${this.filters.avail==='all'?' sel':''}" onclick="C.setAvail('all')">All</button>
+            <button class="avbtn${this.filters.avail==='in'?' sel':''}" onclick="C.setAvail('in')">In Stock Only</button>
+            <button class="avbtn sel-so${this.filters.avail==='out'?' sel':''}" onclick="C.setAvail('out')">Sold Out Only</button>
+          </div>
+        </div>`;
+    },
+    toggleFilters() {
+      this._fopen = !this._fopen;
+      const d = document.getElementById('fdrawer');
+      const btn = document.getElementById('filter-toggle');
+      if (this._fopen) { this.buildFilters(); d.classList.add('open'); btn.classList.add('on'); }
+      else { d.classList.remove('open'); btn.classList.remove('on'); }
+    },
+    toggleFSize(sz) {
+      const arr = this.filters.sizes;
+      const i = arr.indexOf(sz); if(i>=0) arr.splice(i,1); else arr.push(sz);
+      if(this._fopen) this.buildFilters(); this.renderGrid(); this.updateFilterUI();
+    },
+    toggleFColor(clrV) {
+      const arr = this.filters.colors;
+      const i = arr.indexOf(clrV); if(i>=0) arr.splice(i,1); else arr.push(clrV);
+      if(this._fopen) this.buildFilters(); this.renderGrid(); this.updateFilterUI();
+    },
+    setAvail(v) { this.filters.avail = v; if(this._fopen) this.buildFilters(); this.renderGrid(); this.updateFilterUI(); },
+    setSort(v) { this.sort = v; this.renderGrid(); },
+    clearFilters() {
+      this.filters = { sizes:[], colors:[], minPrice:'', maxPrice:'', avail:'all' };
+      this.sort = ''; document.getElementById('sort-sel').value = '';
+      if(this._fopen) this.buildFilters();
+      this.renderGrid(); this.updateFilterUI();
+    },
+    countActiveFilters() {
+      const f = this.filters;
+      return f.sizes.length + f.colors.length + (f.minPrice?1:0) + (f.maxPrice?1:0) + (f.avail!=='all'?1:0) + (this.sort?1:0);
+    },
+    updateFilterUI() {
+      const cnt = this.countActiveFilters();
+      const badge = document.getElementById('factive-cnt');
+      const clearBtn = document.getElementById('clear-all-btn');
+      const chipsEl = document.getElementById('active-chips');
+      if (badge) { badge.style.display = cnt ? 'inline-block' : 'none'; badge.textContent = cnt; }
+      if (clearBtn) clearBtn.style.display = cnt ? 'inline-block' : 'none';
+      if (!chipsEl) return;
+      const chips = [];
+      this.filters.sizes.forEach(s => chips.push(`<span class="fchip" onclick="C.toggleFSize('${e(s)}')">📐 ${e(s)} <span class="fx">✕</span></span>`));
+      this.filters.colors.forEach(c => chips.push(`<span class="fchip" onclick="C.toggleFColor('${e(c)}')" style="gap:6px"><span class="cdot-f" style="background:${clr(c)};width:10px;height:10px;"></span>${e(c)} <span class="fx">✕</span></span>`));
+      if (this.filters.minPrice) chips.push(`<span class="fchip" onclick="C.filters.minPrice='';C.renderGrid();C.updateFilterUI()">₹≥${this.filters.minPrice} <span class="fx">✕</span></span>`);
+      if (this.filters.maxPrice) chips.push(`<span class="fchip" onclick="C.filters.maxPrice='';C.renderGrid();C.updateFilterUI()">₹≤${this.filters.maxPrice} <span class="fx">✕</span></span>`);
+      if (this.filters.avail === 'in') chips.push(`<span class="fchip" onclick="C.setAvail('all')">✅ In Stock <span class="fx">✕</span></span>`);
+      if (this.filters.avail === 'out') chips.push(`<span class="fchip" onclick="C.setAvail('all')">❌ Sold Out <span class="fx">✕</span></span>`);
+      if (this.sort) chips.push(`<span class="fchip" onclick="C.setSort('');document.getElementById('sort-sel').value=''">↕ ${document.getElementById('sort-sel')?.selectedOptions[0]?.text||'Sort'} <span class="fx">✕</span></span>`);
+      chipsEl.innerHTML = chips.join('');
+    },
     renderGrid() {
       const grid = document.getElementById('pgrid');
       let fl = [...AP];
-      // FIX filtering: match categoryId OR categoryName
+      // ── Category filter
       if (this.cat !== 'all') {
         fl = fl.filter(p => String(p.categoryId) === String(this.cat) || (p.categoryName||'').toLowerCase() === this.cat.toLowerCase());
       }
+      // ── Text search
       if (this.q) {
         const q = this.q.toLowerCase();
         fl = fl.filter(p => {
@@ -462,9 +622,49 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
           return (p.name||'').toLowerCase().includes(q) || (p.description||'').toLowerCase().includes(q) || (p.categoryName||'').toLowerCase().includes(q) || cd.includes(q);
         });
       }
-      document.getElementById('pcnt').innerHTML = fl.length ? `Showing <span>${fl.length}</span> styles` : '';
-      if (!fl.length) return grid.innerHTML = `<div class="state"><h3>No matches found</h3><p>Try a different category or search term.</p></div>`;
-      
+      // ── Size filter
+      if (this.filters.sizes.length) {
+        fl = fl.filter(p => {
+          const pSizes = (p.variants||[]).flatMap(v=>(v.sizes||[]).map(s=>s.size));
+          return this.filters.sizes.every(s => pSizes.includes(s));
+        });
+      }
+      // ── Color filter
+      if (this.filters.colors.length) {
+        fl = fl.filter(p => {
+          const pCols = (p.variants||[]).map(v=>v.color).filter(Boolean);
+          return this.filters.colors.every(c => pCols.includes(c));
+        });
+      }
+      // ── Price range filter
+      const minP2 = this.filters.minPrice ? +this.filters.minPrice : null;
+      const maxP2 = this.filters.maxPrice ? +this.filters.maxPrice : null;
+      if (minP2 !== null || maxP2 !== null) {
+        fl = fl.filter(p => {
+          const pr = minP(p);
+          if (!pr) return false;
+          if (minP2 !== null && pr < minP2) return false;
+          if (maxP2 !== null && pr > maxP2) return false;
+          return true;
+        });
+      }
+      // ── Availability filter
+      if (this.filters.avail === 'in') fl = fl.filter(p => totS(p) > 0);
+      if (this.filters.avail === 'out') fl = fl.filter(p => totS(p) === 0);
+      // ── Sort
+      if (this.sort === 'name-az') fl.sort((a,b)=>(a.name||'').localeCompare(b.name||''));
+      else if (this.sort === 'name-za') fl.sort((a,b)=>(b.name||'').localeCompare(a.name||''));
+      else if (this.sort === 'price-asc') fl.sort((a,b)=>(minP(a)||0)-(minP(b)||0));
+      else if (this.sort === 'price-desc') fl.sort((a,b)=>(minP(b)||0)-(minP(a)||0));
+      else if (this.sort === 'newest') fl.sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
+
+      const activeF = this.countActiveFilters();
+      const cntTxt = fl.length
+        ? `Showing <span>${fl.length}</span> of <span>${AP.length}</span> styles${activeF ? ` <span style="color:var(--acc);font-size:0.78rem;">(${activeF} filter${activeF>1?'s':''})</span>` : ''}`
+        : '';
+      document.getElementById('pcnt').innerHTML = cntTxt;
+      if (!fl.length) return grid.innerHTML = `<div class="state"><h3>No matches found</h3><p>Try adjusting filters or search term.</p><button onclick="C.clearFilters()" style="margin-top:16px;padding:10px 24px;background:var(--acc);color:#fff;border:none;border-radius:var(--rf);font-weight:800;cursor:pointer;font-family:inherit;font-size:0.9rem;">✕ Clear All Filters</button></div>`;
+
       grid.innerHTML = fl.map(p => {
         const pcode = code(p);
         const price = minP(p);
@@ -472,7 +672,8 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
         const img = ph ? `<img src="${ph}" class="pimg" loading="lazy">` : `<div class="pno-img">👗</div>`;
         const cols = (p.variants||[]).map(v=>v.color).filter(Boolean);
         const dots = cols.slice(0,5).map(c=>`<span class="cdot" style="background:${clr(c)}" title="${e(c)}"></span>`).join('');
-        
+        const pSizes = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).filter(s=>+s.stock>0).map(s=>s.size)))];
+        const szPrev = pSizes.slice(0,4).map(s=>`<span style="font-size:0.65rem;padding:2px 6px;background:rgba(255,255,255,0.06);border:1px solid var(--bdr);border-radius:4px;color:var(--txt2);font-weight:700;">${e(s)}</span>`).join('');
         return `
           <div class="pcard" onclick="C.det('${p.id}')">
             <div class="pimg-box">
@@ -485,6 +686,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
               <div class="pcat">${e(p.categoryName||'EXCLUSIVE')}</div>
               <div class="pname">${e(p.name)}</div>
               <div class="cdots">${dots||'<span style="opacity:0">.</span>'}</div>
+              <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px;min-height:20px;">${szPrev}</div>
               <div class="pftr">
                 <div class="pprice">${price ? '₹'+price.toLocaleString('en-IN') : 'Contact'}</div>
               </div>
@@ -495,22 +697,39 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
     det(id) {
       const p = AP.find(x=>x.id===id); if(!p)return;
       const m = document.getElementById('det-m');
+      // Reset state on each open
+      m.dataset.pid = id; m.dataset.szs = '[]'; delete m.dataset.sz;
+
       const pcode = code(p);
       const price = minP(p);
-      const sizes = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).filter(s=>s.stock>0).map(s=>s.size)))];
+      const isSO = totS(p) === 0; // sold out
+      const allSzs = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).map(s=>s.size)))];
+      const inStk = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).filter(s=>+s.stock>0).map(s=>s.size)))];
+      const szShow = isSO ? allSzs : inStk;
       const cols = (p.variants||[]).map(v=>v.color).filter(Boolean);
       const photos = p.photos||[];
-      
-      const gall = photos[0] ? `<img src="${photos[0].data}" id="dimg" class="mimg">` : `<div class="mph">👗</div>`;
+
+      const gall = photos[0] ? `<img src="${photos[0].data}" id="dimg" class="mimg">` : `<div class="mph">ðŸ‘—</div>`;
       const thumbs = photos.length>1 ? `<div class="thumbrow">${photos.map((ph,i)=>`<img src="${ph.data}" class="thumb${i===0?' active':''}" onclick="C.setImg(this)">`).join('')}</div>` : '';
-      const szH = sizes.length
-        ? sizes.map(s=>`<span class="sz" onclick="C.selSz(this,'${e(s)}')" style="cursor:pointer">${e(s)}</span>`).join('')
-        : `<span class="sz" style="opacity:0.6">Contact for sizes</span>`;
+      const szH = szShow.length
+        ? szShow.map(s=>`<span class="sz" onclick="C.selSz(this,'${e(s)}')" style="cursor:pointer">${e(s)}</span>`).join('')
+        : `<span class="sz" style="opacity:0.5">${isSO ? 'No size info' : 'Contact for sizes'}</span>`;
       const clH = cols.length ? `<div class="colorlist">${cols.map(c=>`<span class="ctag"><span class="cdotl" style="background:${clr(c)}"></span>${e(c)}</span>`).join('')}</div>` : '';
+
+      const actBtns = isSO
+        ? `<div style="background:rgba(244,63,94,0.08);border:1px solid rgba(244,63,94,0.3);border-radius:12px;padding:14px;text-align:center;margin-bottom:12px;">
+            <div style="color:var(--err);font-weight:800;font-size:0.9rem;margin-bottom:4px;">❌ Currently Sold Out</div>
+            <div style="color:var(--txt2);font-size:0.78rem;">Enquire below — we'll notify you when restocked</div>
+           </div>
+           <div class="dacts"><button class="btn btn-wa" style="flex:1" onclick="C.soldOutWA('${p.id}')">📩 Enquire on WhatsApp</button></div>`
+        : `<div class="dacts">
+             <button class="btn btn-p" onclick="C.addIQ('${p.id}')" id="btn-add-${p.id}">🛒 Add to Basket</button>
+             <button class="btn btn-wa" onclick="C.directWA('${p.id}')">WhatsApp 💬</button>
+           </div>`;
 
       m.innerHTML = `<div class="modal lg">
         <div class="mhdr">
-          <div><div class="mcode">Code: ${pcode}</div></div>
+          <div><div class="mcode">Code: ${pcode}${isSO ? ' &nbsp;<span style="background:var(--err);color:#fff;font-size:0.65rem;padding:2px 8px;border-radius:20px;font-weight:800;vertical-align:middle;">SOLD OUT</span>' : ''}</div></div>
           <button class="mclose" onclick="C.closeM('det-m')">✕</button>
         </div>
         <div class="mbody">
@@ -525,13 +744,21 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
               ${p.description ? `<p class="ddesc">${e(p.description)}</p>` : ''}
               ${cols.length ? `<div><div class="sec-t">Available Colors</div>${clH}</div>` : ''}
               <div>
-                <div class="sec-t">Available Sizes</div>
+                <div class="sec-t" style="display:flex;align-items:center;gap:8px;">
+                  ${isSO ? '📦 Sizes (for enquiry)' : '📏 Select Size(s)'}
+                  <span id="sz-badge" style="display:none;background:var(--acc);color:#fff;padding:2px 10px;border-radius:20px;font-size:0.68rem;font-weight:800;"></span>
+                </div>
                 <div class="szrow" id="szrow-${p.id}">${szH}</div>
-                <div id="sz-err" style="display:none;font-size:0.78rem;color:var(--err);font-weight:700;margin-top:8px;animation:none;">⚠️ Please select a size to continue</div>
+                ${!isSO && szShow.length ? `<div id="sz-err" style="display:none;color:var(--err);font-size:0.78rem;font-weight:700;margin-top:6px;">⚠️ Please select at least one size</div>
+                <div style="color:var(--txt2);font-size:0.72rem;margin-top:4px;">💡 Tap sizes to select — multiple sizes allowed</div>` : ''}
               </div>
-              <div class="dacts">
-                <button class="btn btn-p" onclick="C.addIQ('${p.id}')" id="btn-add-${p.id}">🛒 Add to Basket</button>
-                <button class="btn btn-wa" onclick="C.directWA('${p.id}')">WhatsApp 💬</button>
+              ${actBtns}
+              <div class="share-row" style="margin-top:20px;display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--bdr);padding-top:16px;">
+                <span style="font-size:0.72rem;color:var(--txt2);font-weight:700;align-self:center;white-space:nowrap;">🔗 Share:</span>
+                <button class="share-btn wa" onclick="C.shareWA('${p.id}')" style="font-size:0.7rem;padding:4px 8px;border-radius:4px;border:1px solid var(--bdr);background:transparent;cursor:pointer;">💬 WhatsApp</button>
+                <button class="share-btn fb" onclick="C.shareFB('${p.id}')" style="font-size:0.7rem;padding:4px 8px;border-radius:4px;border:1px solid var(--bdr);background:transparent;cursor:pointer;">📱 Facebook</button>
+                <button class="share-btn tw" onclick="C.shareTW('${p.id}')" style="font-size:0.7rem;padding:4px 8px;border-radius:4px;border:1px solid var(--bdr);background:transparent;cursor:pointer;">𝕏 X/Twitter</button>
+                <button class="share-btn copy" onclick="C.copyLink('${p.id}')" style="font-size:0.7rem;padding:4px 8px;border-radius:4px;border:1px solid var(--bdr);background:transparent;cursor:pointer;">📋 Copy Link</button>
               </div>
             </div>
           </div>
@@ -544,39 +771,47 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       document.querySelectorAll('.thumb').forEach(x=>x.classList.remove('active'));
       t.classList.add('active');
     },
-    // Select a size in the detail modal
+    // Multi-select size toggle
     selSz(el, sz) {
-      document.querySelectorAll('#det-m .sz').forEach(x=>x.classList.remove('active'));
-      el.classList.add('active');
-      document.getElementById('det-m').dataset.sz = sz;
+      el.classList.toggle('active');
+      const m = document.getElementById('det-m');
+      let szs = JSON.parse(m.dataset.szs || '[]');
+      if (szs.includes(sz)) szs = szs.filter(s=>s!==sz); else szs.push(sz);
+      m.dataset.szs = JSON.stringify(szs);
+      const badge = document.getElementById('sz-badge');
+      if (badge) { badge.style.display = szs.length ? 'inline-block' : 'none'; badge.textContent = szs.length + ' selected'; }
       const err = document.getElementById('sz-err');
-      if (err) err.style.display = 'none';
+      if (err && szs.length) err.style.display = 'none';
+      const btn = document.getElementById('btn-add-' + m.dataset.pid);
+      if (btn) btn.innerHTML = szs.length ? `ðŸ›’ Add ${szs.length > 1 ? szs.length + ' Sizes' : 'Size: ' + szs[0]} to Basket` : 'ðŸ›’ Add to Basket';
     },
-    closeM(id) { document.getElementById(id).classList.remove('open'); },
+    closeM(id) {
+      const el=document.getElementById(id); if(el) el.classList.remove('open');
+      if(id==='det-m') history.replaceState(null,'',location.href.split('#')[0]);
+    },
+
     loadIQ() { try { const s=localStorage.getItem('bq_bask'); if(s)this.iq=JSON.parse(s); }catch(e){} this.uFAB(); },
     svIQ() { try { localStorage.setItem('bq_bask',JSON.stringify(this.iq)); }catch(e){} this.uFAB(); },
     addIQ(id) {
-      const p = AP.find(x=>x.id===id); if(!p)return;
+      const p = AP.find(x=>x.id===id); if(!p) return;
       const m = document.getElementById('det-m');
-      const sz = m.dataset.sz || '';
-      // Check if this product has available sizes — if yes, size must be selected
-      const availSizes = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).filter(s=>+s.stock>0).map(s=>s.size)))];
-      if (availSizes.length > 0 && !sz) {
+      const szs = JSON.parse(m.dataset.szs || '[]');
+      const availSzs = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).filter(s=>+s.stock>0).map(s=>s.size)))];
+      if (availSzs.length > 0 && szs.length === 0) {
         const err = document.getElementById('sz-err');
-        if (err) { err.style.display='block'; err.style.animation='none'; void err.offsetWidth; err.style.animation='tin 0.4s ease'; }
+        if (err) err.style.display = 'block';
         const row = document.querySelector('#det-m .szrow');
-        if (row) { row.style.animation='none'; void row.offsetWidth; row.style.outline='2px solid var(--err)'; row.style.borderRadius='8px'; setTimeout(()=>row.style.outline='',1500); }
-        toast('👆 Please select a size first!');
-        return;
+        if (row) { row.style.outline='2px solid var(--err)'; row.style.borderRadius='8px'; setTimeout(()=>row.style.outline='',1800); }
+        toast('ðŸ‘† Select at least one size first!'); return;
       }
-      const key = p.id + (sz ? '|' + sz : '');
+      const key = p.id + (szs.length ? '|' + [...szs].sort().join(',') : '');
       if (!this.iq.some(x=>x.id===key)) {
-        this.iq.push({id:key, pid:p.id, name:p.name, size:sz, code:getRawIdForWA(p), price:minP(p), photo:p.photos?.[0]?.data});
-        this.svIQ(); toast('✅ Added to Basket — Size ' + (sz||'N/A'));
-        // Reset size selection for next open
-        delete m.dataset.sz;
-        this.closeM('det-m');
-      } else toast('Already in basket with this size!');
+        this.iq.push({ id:key, pid:p.id, name:p.name, sizes:szs, code:getRawIdForWA(p), price:minP(p), photo:p.photos?.[0]?.data });
+        this.svIQ();
+        const szLabel = szs.length ? ` â€” ${szs.length>1?'Sizes':'Size'}: ${szs.join(', ')}` : '';
+        toast('âœ… Added to Basket' + szLabel);
+        m.dataset.szs = '[]'; this.closeM('det-m');
+      } else toast('âš ï¸ Same size combination already in basket!');
     },
     rmIQ(id) { this.iq=this.iq.filter(x=>x.id!==id); this.svIQ(); this.renderIQ(); },
     clearIQ() { this.iq=[]; this.svIQ(); this.closeM('iq-m'); },
@@ -586,59 +821,132 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
     },
     renderIQ() {
       const el = document.getElementById('iq-body');
-      if(!this.iq.length) return el.innerHTML = `<div class="state"><h3>Empty Basket</h3><p>Explore our catalog to add items.</p></div>`;
-      el.innerHTML = this.iq.map(i => `
-        <div class="iqi">
-          ${i.photo ? `<img src="${i.photo}" class="iqth">` : `<div class="iqth" style="background:#111"></div>`}
+      if(!this.iq.length) return el.innerHTML = `<div class="state"><h3>ðŸ›’ Basket Empty</h3><p>Browse our collection and add items.</p></div>`;
+      el.innerHTML = this.iq.map(i => {
+        const sizes = i.sizes && i.sizes.length ? i.sizes : (i.size ? [i.size] : []);
+        const szPills = sizes.map(s=>`<span style="background:var(--acc);color:#fff;padding:2px 9px;border-radius:20px;font-size:0.7rem;font-weight:800;">${e(s)}</span>`).join(' ');
+        return `<div class="iqi">
+          ${i.photo ? `<img src="${i.photo}" class="iqth">` : `<div class="iqth" style="background:#111;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">ðŸ‘—</div>`}
           <div class="iqinfo">
             <div class="iqname">${e(i.name)}</div>
-            <div class="iqcode">Code: ${e(i.code)}${i.size ? ` &nbsp;·&nbsp; <span style="background:var(--acc);color:#fff;padding:2px 8px;border-radius:6px;font-size:0.7rem;font-weight:800;">${e(i.size)}</span>` : ''}</div>
-            <div style="font-weight:800;color:var(--acc);margin-top:4px;">${i.price ? '&#8377;'+i.price.toLocaleString('en-IN') : '--'}</div>
+            <div class="iqcode" style="margin-bottom:5px;">ID: <b>${e(i.code)}</b></div>
+            ${szPills ? `<div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px;">${szPills}</div>` : ''}
+            <div style="font-weight:800;color:var(--acc);font-size:0.95rem;">${i.price ? 'â‚¹'+i.price.toLocaleString('en-IN') : 'Contact for price'}</div>
           </div>
-          <button class="iqrm" onclick="C.rmIQ('${i.id}')">✕</button>
-        </div>`).join('');
+          <button class="iqrm" onclick="C.rmIQ('${i.id}')">âœ•</button>
+        </div>`;
+      }).join('');
     },
     openIQ() { this.renderIQ(); document.getElementById('iq-m').classList.add('open'); },
-    
-    // WHATSAPP FIXES
     _waPhone() {
-      // Use _settings (always populated after setup()) or fall back to D for backward-compat
       const wa = _settings.whatsappNumber || (D&&D.settings&&D.settings.whatsappNumber) || '';
       return wa.replace(/\D/g,'');
     },
+    _shopName() { return document.getElementById('fbn')?.textContent?.trim() || 'Boutique'; },
+    _div() { return '\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501'; },
     sendWA() {
       if(!this.iq.length) return;
       const ph = this._waPhone();
-      let msg = '*Basket Inquiry* \uD83D\uDED2\n\nHello!\nI am interested in the following items:\n\n';
-      this.iq.forEach(i => {
-        msg += '\uD83D\uDCE6 *' + i.name + '*\n';
-        msg += '\uD83C\uDFF7\uFE0F ID: *' + i.code + '*\n';
-        if (i.size) msg += '\uD83D\uDCCF Size: *' + i.size + '*\n';
+      const sn = this._shopName();
+      let msg = '\uD83D\uDECD\uFE0F *' + sn + ' \u2014 Order Inquiry*\n\nHello! I would like to inquire about:\n' + this._div() + '\n\n';
+      this.iq.forEach((i, idx) => {
+        const sizes = i.sizes && i.sizes.length ? i.sizes : (i.size ? [i.size] : []);
+        msg += (idx+1) + '. *' + i.name + '*\n';
+        msg += '   \uD83C\uDFF7\uFE0F Code: *' + i.code + '*\n';
+        if (sizes.length) msg += '   \uD83D\uDCCF Size' + (sizes.length>1?'s':'') + ': *' + sizes.join(', ') + '*\n';
+        if (i.price) msg += '   \uD83D\uDCB0 \u20B9' + i.price.toLocaleString('en-IN') + '\n';
         msg += '\n';
       });
-      msg += 'Please confirm availability and pricing.\n_Thank you!_';
-      window.open((ph ? 'https://wa.me/' + ph : 'https://wa.me/') + '?text=' + encodeURIComponent(msg), '_blank');
+      msg += this._div() + '\n\uD83D\uDCE6 Total: *' + this.iq.length + ' item' + (this.iq.length>1?'s':'') + '*\n_Please confirm availability & pricing._\n_Thank you! \uD83D\uDE4F_';
+      window.open((ph ? 'https://wa.me/'+ph : 'https://wa.me/') + '?text=' + encodeURIComponent(msg), '_blank');
     },
     directWA(id) {
-      const p = AP.find(x=>x.id===id); if(!p)return;
+      const p = AP.find(x=>x.id===id); if(!p) return;
       const ph = this._waPhone();
-      const pid = getRawIdForWA(p);
       const m = document.getElementById('det-m');
-      const selSz = m ? m.dataset.sz : '';
-      const availSizes = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).filter(s=>s.stock>0).map(s=>s.size)))];
-      let msg = '*Product Inquiry* \uD83D\uDED2\n\nHello!\nI am interested in this product:\n\n';
+      const szs = JSON.parse(m?.dataset.szs || '[]');
+      const availSzs = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).filter(s=>+s.stock>0).map(s=>s.size)))];
+      if (availSzs.length > 0 && szs.length === 0) {
+        const err = document.getElementById('sz-err');
+        if (err) err.style.display = 'block';
+        const row = document.querySelector('#det-m .szrow');
+        if (row) { row.style.outline='2px solid var(--err)'; row.style.borderRadius='8px'; setTimeout(()=>row.style.outline='',1800); }
+        toast('\uD83D\uDC46 Select a size before WhatsApp!'); return;
+      }
+      const sn = this._shopName();
+      let msg = '\uD83D\uDECD\uFE0F *' + sn + ' \u2014 Product Inquiry*\n\nHello! I\'m interested in:\n' + this._div() + '\n\n';
+      msg += '\uD83D\uDCE6 *' + p.name + '*\n\uD83C\uDFF7\uFE0F Code: *' + getRawIdForWA(p) + '*\n';
+      if (szs.length) msg += '\uD83D\uDCCF Size' + (szs.length>1?'s':'') + ': *' + szs.join(', ') + '*\n';
+      if (minP(p)) msg += '\uD83D\uDCB0 Price: \u20B9' + minP(p).toLocaleString('en-IN') + '\n';
+      msg += '\n' + this._div() + '\n_Please confirm availability & pricing._\n_Thank you! \uD83D\uDE4F_';
+      window.open((ph ? 'https://wa.me/'+ph : 'https://wa.me/') + '?text=' + encodeURIComponent(msg), '_blank');
+    },
+    soldOutWA(id) {
+      const p = AP.find(x=>x.id===id); if(!p) return;
+      const ph = this._waPhone();
+      const m = document.getElementById('det-m');
+      const szs = JSON.parse(m?.dataset.szs || '[]');
+      const sn = this._shopName();
+      let msg = '\uD83D\uDECD\uFE0F *' + sn + ' \u2014 Sold Out Inquiry*\n\nHello! I\'m interested in a sold-out item:\n' + this._div() + '\n\n';
+      msg += '\uD83D\uDCE6 *' + p.name + '*\n\uD83C\uDFF7\uFE0F Code: *' + getRawIdForWA(p) + '*\n';
+      if (szs.length) msg += '\uD83D\uDCCF Interested Size' + (szs.length>1?'s':'') + ': *' + szs.join(', ') + '*\n';
+      msg += '\n' + this._div() + '\n\u2753 *When will this be restocked?*\n_If you have a similar style, please let me know too!_\n_Thank you! \uD83D\uDE4F_';
+      window.open((ph ? 'https://wa.me/'+ph : 'https://wa.me/') + '?text=' + encodeURIComponent(msg), '_blank');
+    },
+    // ━━━ SOCIAL SHARE ━━━
+    _productURL(id) {
+      const p = AP.find(x=>x.id===id);
+      const base = location.href.split('#')[0];
+      return base + '#' + encodeURIComponent(id);
+    },
+    shareWA(id) {
+      const p = AP.find(x=>x.id===id); if(!p) return;
+      const ph = this._waPhone();
+      const sn = this._shopName();
+      const url = this._productURL(id);
+      let msg = '\uD83D\uDECD\uFE0F *' + sn + '* \u2014 Check out this product!\n\n';
       msg += '\uD83D\uDCE6 *' + p.name + '*\n';
-      msg += '\uD83C\uDFF7\uFE0F ID: *' + pid + '*\n';
-      if (selSz) msg += '\uD83D\uDCCF Size: *' + selSz + '*\n';
-      else if (availSizes.length) msg += '\uD83D\uDCCF Available Sizes: ' + availSizes.join(', ') + '\n';
-      msg += '\nIs this available? Please confirm price and stock.\n_Thank you!_';
-      window.open((ph ? 'https://wa.me/' + ph : 'https://wa.me/') + '?text=' + encodeURIComponent(msg), '_blank');
+      msg += '\uD83C\uDFF7\uFE0F Code: *' + getRawIdForWA(p) + '*\n';
+      if (minP(p)) msg += '\uD83D\uDCB0 Price: \u20B9' + minP(p).toLocaleString('en-IN') + '\n';
+      msg += '\n\uD83D\uDD17 View: ' + url;
+      window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+    },
+    shareFB(id) {
+      const url = this._productURL(id);
+      window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+    },
+    shareTW(id) {
+      const p = AP.find(x=>x.id===id); if(!p) return;
+      const sn = this._shopName();
+      const url = this._productURL(id);
+      const txt = 'Check out ' + p.name + ' at ' + sn + '!';
+      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(txt) + '&url=' + encodeURIComponent(url), '_blank');
+    },
+    copyLink(id) {
+      const url = this._productURL(id);
+      navigator.clipboard?.writeText(url).then(() => toast('\u2705 Product link copied!')).catch(() => {
+        const ta = document.createElement('textarea'); ta.value = url;
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+        toast('\u2705 Link copied!');
+      });
     },
     bind() {
-      document.getElementById('sinput').oninput = e => { clearTimeout(this._t); this._t=setTimeout(()=>{this.q=e.target.value.trim();this.renderGrid();},200); };
+      document.getElementById('sinput').oninput = ev => { clearTimeout(this._t); this._t=setTimeout(()=>{this.q=ev.target.value.trim();this.renderGrid();},200); };
       document.getElementById('fab').onclick = () => this.openIQ();
-      ['iq-m','det-m'].forEach(id=>{ document.getElementById(id).onclick = e => { if(e.target.id===id) this.closeM(id); }});
-      document.addEventListener('keydown', e => { if(e.key==='Escape'){ this.closeM('det-m'); this.closeM('iq-m'); }});
+      ['iq-m','det-m'].forEach(id=>{ document.getElementById(id).onclick = ev => { if(ev.target.id===id) this.closeM(id); }});
+      document.addEventListener('keydown', ev => {
+        if(ev.key==='Escape'){
+          this.closeM('det-m');
+          history.replaceState(null,'',location.href.split('#')[0]);
+          this.closeM('iq-m');
+        }
+      });
+      // Hash-based deep linking: auto-open product from URL
+      const hash = decodeURIComponent(location.hash.slice(1));
+      if (hash) {
+        const p = AP.find(x=>x.id===hash);
+        if (p) setTimeout(()=>this.det(hash), 300);
+      }
     }
   };
   document.addEventListener('DOMContentLoaded', ()=>C.init());
