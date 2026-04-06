@@ -188,8 +188,8 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 .fgroup{margin-bottom:18px;}
 .fgroup:last-child{margin-bottom:0;}
 .fglabel{font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--acc);font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
-.fchips{display:flex;flex-wrap:wrap;gap:8px;}
-.fopt{padding:6px 14px;background:rgba(255,255,255,0.04);border:1px solid var(--bdr);border-radius:var(--rf);font-size:0.82rem;font-weight:600;color:var(--txt2);cursor:pointer;transition:var(--tr);font-family:inherit;display:flex;align-items:center;gap:6px;}
+.fchips{display:flex;flex-wrap:wrap;gap:6px;}
+.fopt{padding:4px 10px;background:rgba(255,255,255,0.04);border:1px solid var(--bdr);border-radius:var(--rf);font-size:0.75rem;font-weight:600;color:var(--txt2);cursor:pointer;transition:var(--tr);font-family:inherit;display:flex;align-items:center;gap:6px;}
 .fopt:hover{border-color:var(--acc);color:var(--txt);}
 .fopt.sel{background:rgba(99,102,241,0.15);border-color:var(--acc);color:#fff;}
 .cdot-f{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,0.2);flex-shrink:0;}
@@ -221,7 +221,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 <nav class="topnav">
   <div class="brand" id="nbrand">Mg Madhuraa Boutique<small id="ntag">Elegance Redefined</small></div>
   <div class="srchwrap">
-    <span class="si">ðŸ”</span>
+    <span class="si">🔍</span>
     <input type="search" id="sinput" placeholder="Search products, styles, or IDs..." autocomplete="off">
   </div>
   <button class="fab hide" id="fab">🛍️ Basket <span class="fbadge" id="fcnt">0</span></button>
@@ -626,14 +626,14 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       if (this.filters.sizes.length) {
         fl = fl.filter(p => {
           const pSizes = (p.variants||[]).flatMap(v=>(v.sizes||[]).map(s=>s.size));
-          return this.filters.sizes.every(s => pSizes.includes(s));
+          return this.filters.sizes.some(s => pSizes.includes(s));
         });
       }
       // ── Color filter
       if (this.filters.colors.length) {
         fl = fl.filter(p => {
           const pCols = (p.variants||[]).map(v=>v.color).filter(Boolean);
-          return this.filters.colors.every(c => pCols.includes(c));
+          return this.filters.colors.some(c => pCols.includes(c));
         });
       }
       // ── Price range filter
@@ -709,7 +709,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       const cols = (p.variants||[]).map(v=>v.color).filter(Boolean);
       const photos = p.photos||[];
 
-      const gall = photos[0] ? `<img src="${photos[0].data}" id="dimg" class="mimg">` : `<div class="mph">ðŸ‘—</div>`;
+      const gall = photos[0] ? `<img src="${photos[0].data}" id="dimg" class="mimg">` : `<div class="mph">👗</div>`;
       const thumbs = photos.length>1 ? `<div class="thumbrow">${photos.map((ph,i)=>`<img src="${ph.data}" class="thumb${i===0?' active':''}" onclick="C.setImg(this)">`).join('')}</div>` : '';
       const szH = szShow.length
         ? szShow.map(s=>`<span class="sz" onclick="C.selSz(this,'${e(s)}')" style="cursor:pointer">${e(s)}</span>`).join('')
@@ -752,6 +752,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
                 ${!isSO && szShow.length ? `<div id="sz-err" style="display:none;color:var(--err);font-size:0.78rem;font-weight:700;margin-top:6px;">⚠️ Please select at least one size</div>
                 <div style="color:var(--txt2);font-size:0.72rem;margin-top:4px;">💡 Tap sizes to select — multiple sizes allowed</div>` : ''}
               </div>
+              ${p.videoLink ? `<a href="${e(p.videoLink)}" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;margin-bottom:12px;padding:12px 14px;background:rgba(236,72,153,0.1);color:var(--acc2);border:1px solid rgba(236,72,153,0.3);border-radius:12px;text-decoration:none;font-weight:800;font-size:0.9rem;transition:var(--tr);"><span style="font-size:1.1rem;">▶️</span> Watch Product Video / Post</a>` : ''}
               ${actBtns}
               <div class="share-row" style="margin-top:20px;display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--bdr);padding-top:16px;">
                 <span style="font-size:0.72rem;color:var(--txt2);font-weight:700;align-self:center;white-space:nowrap;">🔗 Share:</span>
@@ -783,7 +784,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       const err = document.getElementById('sz-err');
       if (err && szs.length) err.style.display = 'none';
       const btn = document.getElementById('btn-add-' + m.dataset.pid);
-      if (btn) btn.innerHTML = szs.length ? `ðŸ›’ Add ${szs.length > 1 ? szs.length + ' Sizes' : 'Size: ' + szs[0]} to Basket` : 'ðŸ›’ Add to Basket';
+      if (btn) btn.innerHTML = szs.length ? `🛒 Add ${szs.length > 1 ? szs.length + ' Sizes' : 'Size: ' + szs[0]} to Basket` : '🛒 Add to Basket';
     },
     closeM(id) {
       const el=document.getElementById(id); if(el) el.classList.remove('open');
@@ -802,16 +803,16 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
         if (err) err.style.display = 'block';
         const row = document.querySelector('#det-m .szrow');
         if (row) { row.style.outline='2px solid var(--err)'; row.style.borderRadius='8px'; setTimeout(()=>row.style.outline='',1800); }
-        toast('ðŸ‘† Select at least one size first!'); return;
+        toast('👆 Select at least one size first!'); return;
       }
       const key = p.id + (szs.length ? '|' + [...szs].sort().join(',') : '');
       if (!this.iq.some(x=>x.id===key)) {
         this.iq.push({ id:key, pid:p.id, name:p.name, sizes:szs, code:getRawIdForWA(p), price:minP(p), photo:p.photos?.[0]?.data });
         this.svIQ();
-        const szLabel = szs.length ? ` â€” ${szs.length>1?'Sizes':'Size'}: ${szs.join(', ')}` : '';
-        toast('âœ… Added to Basket' + szLabel);
+        const szLabel = szs.length ? ` — ${szs.length>1?'Sizes':'Size'}: ${szs.join(', ')}` : '';
+        toast('✅ Added to Basket' + szLabel);
         m.dataset.szs = '[]'; this.closeM('det-m');
-      } else toast('âš ï¸ Same size combination already in basket!');
+      } else toast('⚠️ Same size combination already in basket!');
     },
     rmIQ(id) { this.iq=this.iq.filter(x=>x.id!==id); this.svIQ(); this.renderIQ(); },
     clearIQ() { this.iq=[]; this.svIQ(); this.closeM('iq-m'); },
@@ -821,19 +822,19 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
     },
     renderIQ() {
       const el = document.getElementById('iq-body');
-      if(!this.iq.length) return el.innerHTML = `<div class="state"><h3>ðŸ›’ Basket Empty</h3><p>Browse our collection and add items.</p></div>`;
+      if(!this.iq.length) return el.innerHTML = `<div class="state"><h3>🛒 Basket Empty</h3><p>Browse our collection and add items.</p></div>`;
       el.innerHTML = this.iq.map(i => {
         const sizes = i.sizes && i.sizes.length ? i.sizes : (i.size ? [i.size] : []);
         const szPills = sizes.map(s=>`<span style="background:var(--acc);color:#fff;padding:2px 9px;border-radius:20px;font-size:0.7rem;font-weight:800;">${e(s)}</span>`).join(' ');
         return `<div class="iqi">
-          ${i.photo ? `<img src="${i.photo}" class="iqth">` : `<div class="iqth" style="background:#111;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">ðŸ‘—</div>`}
+          ${i.photo ? `<img src="${i.photo}" class="iqth">` : `<div class="iqth" style="background:#111;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">👗</div>`}
           <div class="iqinfo">
             <div class="iqname">${e(i.name)}</div>
             <div class="iqcode" style="margin-bottom:5px;">ID: <b>${e(i.code)}</b></div>
             ${szPills ? `<div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px;">${szPills}</div>` : ''}
-            <div style="font-weight:800;color:var(--acc);font-size:0.95rem;">${i.price ? 'â‚¹'+i.price.toLocaleString('en-IN') : 'Contact for price'}</div>
+            <div style="font-weight:800;color:var(--acc);font-size:0.95rem;">${i.price ? '₹'+i.price.toLocaleString('en-IN') : 'Contact for price'}</div>
           </div>
-          <button class="iqrm" onclick="C.rmIQ('${i.id}')">âœ•</button>
+          <button class="iqrm" onclick="C.rmIQ('${i.id}')">✕</button>
         </div>`;
       }).join('');
     },
@@ -865,14 +866,8 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       const ph = this._waPhone();
       const m = document.getElementById('det-m');
       const szs = JSON.parse(m?.dataset.szs || '[]');
-      const availSzs = [...new Set((p.variants||[]).flatMap(v=>(v.sizes||[]).filter(s=>+s.stock>0).map(s=>s.size)))];
-      if (availSzs.length > 0 && szs.length === 0) {
-        const err = document.getElementById('sz-err');
-        if (err) err.style.display = 'block';
-        const row = document.querySelector('#det-m .szrow');
-        if (row) { row.style.outline='2px solid var(--err)'; row.style.borderRadius='8px'; setTimeout(()=>row.style.outline='',1800); }
-        toast('\uD83D\uDC46 Select a size before WhatsApp!'); return;
-      }
+      // Fix: WhatsApp Enquiry without size should be allowed if user prefers!
+      // I am removing the block that forces a size.
       const sn = this._shopName();
       let msg = '\uD83D\uDECD\uFE0F *' + sn + ' \u2014 Product Inquiry*\n\nHello! I\'m interested in:\n' + this._div() + '\n\n';
       msg += '\uD83D\uDCE6 *' + p.name + '*\n\uD83C\uDFF7\uFE0F Code: *' + getRawIdForWA(p) + '*\n';
