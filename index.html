@@ -397,9 +397,31 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
     setup(data) {
       AP = (data.products||[]).filter(p=>p.status!=='archived'&&p.status!=='deleted');
       _settings = data.settings || {}; // save for WhatsApp functions
-      const sn = data.shopName||'Premium Boutique';
+      const sn = data.shopName||'Mg Madhuraa Boutique';
       const tg = data.tagline||'';
-      const {phone, whatsappNumber, instagramHandle} = _settings;
+      const {phone, whatsappNumber, instagramHandle, themeAccent, themeAccent2, themeBg} = _settings;
+
+      // Apply custom theme colors from admin settings
+      const root = document.documentElement;
+      if (themeAccent) {
+        root.style.setProperty('--acc', themeAccent);
+        root.style.setProperty('--glow', themeAccent + '40');
+        root.style.setProperty('--bdr2', themeAccent + '50');
+      }
+      if (themeAccent2) root.style.setProperty('--acc2', themeAccent2);
+      if (themeBg && themeBg !== 'dark') {
+        const bgs = { midnight:'#0f172a', charcoal:'#1c1c1e', wine:'#1a0008', forest:'#061a06', light:'#f8fafc' };
+        const bg2s = { midnight:'#1e293b', charcoal:'#27272a', wine:'#2d0010', forest:'#0a2d0a', light:'#f1f5f9' };
+        const cards = { midnight:'#1e293b', charcoal:'#27272a', wine:'#2d0010', forest:'#0a2d0a', light:'#ffffff' };
+        const txts = { light:'#0f172a' };
+        const txt2s = { light:'#475569' };
+        const bg = bgs[themeBg]; const bg2 = bg2s[themeBg]; const card = cards[themeBg];
+        if (bg) { root.style.setProperty('--bg', bg); document.body.style.background = bg; }
+        if (bg2) root.style.setProperty('--bg2', bg2);
+        if (card) root.style.setProperty('--card', card);
+        if (txts[themeBg]) root.style.setProperty('--txt', txts[themeBg]);
+        if (txt2s[themeBg]) root.style.setProperty('--txt2', txt2s[themeBg]);
+      }
       
       document.title = sn + ' | Catalog';
       document.getElementById('nbrand').innerHTML = `${e(sn)}<small>${e(tg)}</small>`;
