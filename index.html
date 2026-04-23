@@ -164,6 +164,7 @@ body {
   text-align: left; border: none; background: transparent; 
   width: 100%; font-size: 0.95rem; 
   position: relative; border-radius: 12px;
+  white-space: nowrap;
 }
 .cat-btn:hover { color: #fff; background: rgba(255,255,255,0.03); }
 .cat-btn.active { 
@@ -174,6 +175,16 @@ body {
 .cat-icon { width: 24px; height: 24px; opacity: 0.6; transition: var(--tr); flex-shrink: 0; }
 .cat-btn:hover .cat-icon, .cat-btn.active .cat-icon { opacity: 1; color: var(--accent); }
 .cat-chevron { margin-left: auto; font-size: 0.8rem; opacity: 0.3; }
+
+/* Mobile Category Strip */
+.mobile-cats { display: none; padding: 10px 0; margin-bottom: 20px; border-bottom: 1px solid var(--border); overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.mobile-cats::-webkit-scrollbar { display: none; }
+.mobile-cats .cat-list { flex-direction: row; gap: 10px; width: max-content; }
+.mobile-cats .cat-btn { padding: 10px 20px; border: 1px solid var(--border); width: auto; font-size: 0.8rem; }
+.mobile-cats .cat-chevron, .mobile-cats .cat-icon { display: none; }
+.mobile-cats .cat-btn.active { box-shadow: 0 0 15px var(--accent-glow); }
+
+.filter-trigger { display: none; width: 100%; padding: 15px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; color: #fff; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; margin-bottom: 20px; align-items: center; justify-content: center; gap: 10px; cursor: pointer; }
 
 .f-compact { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 12px; border: 1px solid var(--border); transition: var(--tr); }
 .f-compact:focus-within { border-color: var(--accent); background: rgba(255,255,255,0.06); box-shadow: 0 0 15px var(--accent-glow); }
@@ -412,11 +423,20 @@ body {
   .search-wrap { max-width: 100%; }
   .nav-actions { width: 100%; justify-content: space-between; }
   .shop-wrap { flex-direction: column; padding: 0 15px; }
-  .sidebar { width: 100%; height: auto; position: static; padding: 20px 0; border-bottom: 1px solid var(--border); }
+  .sidebar { 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    z-index: 4000; background: var(--bg-start); 
+    padding: 40px; transform: translateX(-100%); 
+    transition: var(--tr); overflow-y: auto;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .sidebar .side-h { font-size: 1.2rem; }
+  .sidebar .cat-list { flex-direction: column; }
   .main { padding: 20px 0; }
   .hero { height: 350px; }
   .slide-h { font-size: 2.2rem; }
   .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .mobile-cats, .filter-trigger { display: flex; }
 }
 
 @media (max-width: 600px) {
@@ -696,7 +716,10 @@ input:checked + .sw-slider { box-shadow: 0 0 15px var(--accent-glow); }
         else if (item.id === 'hero') h += sections.hero();
         else if (item.id === 'cats' || item.id === 'grid') {
           if (!h.includes('shop-wrap')) {
-             let sw = '<div class="shop-wrap"><aside class="sidebar">' +
+             let sw = '<div class="shop-wrap"><aside class="sidebar" id="sidebar">' +
+               '<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;" class="mobile-only">' +
+               '<h3 class="side-h" style="margin:0;">Refine Search</h3><span style="font-size:1.5rem; cursor:pointer;" onclick="document.getElementById(\'sidebar\').classList.remove(\'open\')">✕</span>' +
+               '</div>' +
                '<div class="side-sec"><h3 class="side-h">Collections</h3><div class="cat-list">' + this.getCatList() + '</div></div>' +
                '<div class="side-sec"><h3 class="side-h">Price Range</h3>' +
                '<div class="f-compact">' +
@@ -709,11 +732,14 @@ input:checked + .sw-slider { box-shadow: 0 0 15px var(--accent-glow); }
                '<div class="side-sec" style="border:none;"><button class="btn-clear" onclick=\'C.clearF()\'>✨ Clear Filters</button></div>' +
                '</aside>';
              
-             // In-Center Hero Placement
-             if (_CONF.shopHeroPlacement === 'center') sw += '<main class="main">' + sections.hero() + '<div id="p-grid"></div><div id="pg-wrap"></div></main>';
-             else sw += '<main class="main"><div id="p-grid"></div><div id="pg-wrap"></div></main>';
+             let mainContent = '<main class="main">';
+             mainContent += '<div class="mobile-cats"><div class="cat-list">' + this.getCatList() + '</div></div>';
+             mainContent += '<button class="filter-trigger" onclick="document.getElementById(\'sidebar\').classList.add(\'open\')">🔍 Filter & Refine</button>';
              
-             sw += '</div>';
+             if (_CONF.shopHeroPlacement === 'center') mainContent += sections.hero();
+             mainContent += '<div id="p-grid"></div><div id="pg-wrap"></div></main>';
+             
+             sw += mainContent + '</div>';
              h += sw;
           }
         }
