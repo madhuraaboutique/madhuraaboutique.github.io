@@ -246,6 +246,130 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 .share-btn.copy:hover{background:var(--acc);color:#fff;}
 .share-btn.tw{background:rgba(0,0,0,0.3);border-color:rgba(255,255,255,0.15);color:#fff;}
 .share-btn.tw:hover{background:#000;border-color:#fff;}
+
+/* --- PREMIUM SCROLLABLE PAGINATION BAR --- */
+.pg-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 30px 0;
+  padding: 16px 24px;
+  background: var(--bg2);
+  border: 1px solid var(--bdr);
+  border-radius: var(--r);
+  box-shadow: var(--sh);
+}
+@media(max-width: 650px) {
+  .pg-container { flex-direction: column; text-align: center; }
+}
+.pg-status {
+  font-size: 0.88rem;
+  color: var(--txt2);
+  font-weight: 500;
+}
+.pg-status span {
+  color: var(--txt);
+  font-weight: 800;
+}
+.pg-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pg-btn {
+  height: 38px;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--bdr);
+  border-radius: 8px;
+  color: var(--txt2);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--tr);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+}
+.pg-btn:hover:not(:disabled) {
+  border-color: var(--acc);
+  color: #fff;
+  background: rgba(99, 102, 241, 0.1);
+}
+.pg-btn.active {
+  background: linear-gradient(135deg, var(--acc), #818cf8);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 10px var(--glow);
+}
+.pg-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.pg-jump-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pg-jump-input {
+  width: 55px;
+  height: 38px;
+  padding: 0 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--bdr);
+  border-radius: 8px;
+  color: var(--txt);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  transition: var(--tr);
+}
+.pg-jump-input:focus {
+  border-color: var(--acc);
+}
+.pg-jump-input.shake {
+  animation: shake-err 0.4s ease;
+  border-color: var(--err) !important;
+}
+
+@keyframes shake-err {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+/* Page status near search bar (Header pagination status) */
+.hdr-pg-status {
+  font-size: 0.72rem;
+  color: var(--txt2);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: var(--bg2);
+  border: 1px solid var(--bdr);
+  padding: 4px 10px;
+  border-radius: var(--rf);
+  margin-left: auto;
+}
+@media(max-width: 850px) {
+  .hdr-pg-status { display: none; }
+}
+
+/* Silky Grid Page Transition */
+.pgrid.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.pgrid {
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 </style>
 </head>
 <body>
@@ -258,6 +382,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
     <div id="ss-results" class="ss-wrap"></div>
   </div>
   <div class="srch-extra">
+    <span class="hdr-pg-status" id="hdr-pg-status" style="display:none">Page 1 of 1</span>
     <button class="fbtn-mini" id="filter-toggle" onclick="C.toggleFilters()">
       🎛️ Filters <span class="fbadge2" id="factive-cnt" style="display:none">0</span>
     </button>
@@ -287,6 +412,7 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
 <div class="main">
   <div class="pbar"><div class="pcnt" id="pcnt"></div></div>
   <div class="pgrid" id="pgrid"><div class="state"><div class="spinner"></div><h3>Curating Catalog...</h3></div></div>
+  <div id="pg-bottom" class="pg-container" style="display:none"></div>
 </div>
 
 <footer class="ftr">
@@ -358,6 +484,146 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
     filters: { sizes:[], colors:[], minPrice:'', maxPrice:'', avail:'all' },
     sort: '',
     _fopen: false,
+    currentPage: 1,
+    itemsPerPage: 24,
+
+    syncHash() {
+      const params = new URLSearchParams();
+      if (this.cat && this.cat !== 'all') params.set('cat', this.cat);
+      if (this.currentPage && this.currentPage > 1) params.set('page', this.currentPage);
+      
+      const newHash = params.toString();
+      const currentHash = location.hash.slice(1);
+      if (newHash !== currentHash && !newHash.startsWith('basket') && !currentHash.startsWith('basket')) {
+        history.replaceState({ cat: this.cat, page: this.currentPage }, '', newHash ? '#' + newHash : location.href.split('#')[0]);
+      }
+    },
+
+    loadFromHash() {
+      const hash = location.hash.slice(1);
+      if (!hash) return;
+      if (hash.length > 15 && !hash.includes('=')) return; // Direct product link
+      if (hash === 'basket') return; // Basket hash
+      
+      const params = new URLSearchParams(hash);
+      const cat = params.get('cat');
+      const page = params.get('page');
+      
+      if (cat) {
+        this.cat = cat;
+        const catbar = document.getElementById('catbar');
+        if (catbar) {
+          catbar.querySelectorAll('.cbtn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.cat === cat);
+          });
+        }
+      }
+      if (page) {
+        const pNum = parseInt(page);
+        if (pNum && pNum > 0) this.currentPage = pNum;
+      }
+    },
+
+    setPage(p) {
+      if (p === this.currentPage) return;
+      const grid = document.getElementById('pgrid');
+      if (grid) {
+        grid.classList.add('fade-out');
+        setTimeout(() => {
+          this.currentPage = p;
+          this.syncHash();
+          this.renderGrid();
+          document.getElementById('pcnt').scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => {
+            grid.classList.remove('fade-out');
+          }, 50);
+        }, 150);
+      } else {
+        this.currentPage = p;
+        this.syncHash();
+        this.renderGrid();
+      }
+    },
+
+    jumpPage(val, maxPages) {
+      const p = parseInt(val);
+      const input = document.getElementById('pg-jump-input');
+      
+      if (isNaN(p) || p < 1 || p > maxPages) {
+        if (input) {
+          input.classList.add('shake');
+          setTimeout(() => {
+            input.classList.remove('shake');
+            if (p > maxPages) {
+              input.value = maxPages;
+              this.setPage(maxPages);
+            } else {
+              input.value = 1;
+              this.setPage(1);
+            }
+          }, 400);
+        }
+        toast('⚠️ Invalid page number!');
+        return;
+      }
+      this.setPage(p);
+    },
+
+    renderPagination(totalItems) {
+      const container = document.getElementById('pg-bottom');
+      if (!container) return;
+      
+      const totalPages = Math.ceil(totalItems / this.itemsPerPage) || 1;
+      container.style.display = 'flex';
+      
+      container.style.display = 'flex';
+      
+      let html = [];
+      const start = (this.currentPage - 1) * this.itemsPerPage + 1;
+      const end = Math.min(start + this.itemsPerPage - 1, totalItems);
+      const statusHTML = `Showing <span>${end - start + 1}</span> styles of Page <span>${this.currentPage}</span> of <span>${totalPages}</span>`;
+      
+      html.push(`<div class="pg-status">${statusHTML}</div>`);
+      
+      // Also update top header indicator
+      const hdrStatus = document.getElementById('hdr-pg-status');
+      if (hdrStatus) {
+        hdrStatus.innerHTML = statusHTML;
+        hdrStatus.style.display = 'inline-block';
+      }
+      
+      html.push(`<div class="pg-controls">`);
+      html.push(`<button class="pg-btn" ${this.currentPage === 1 ? 'disabled' : ''} onclick="C.setPage(${this.currentPage - 1})">‹ Prev</button>`);
+      
+      const range = 2;
+      let startPage = Math.max(1, this.currentPage - range);
+      let endPage = Math.min(totalPages, this.currentPage + range);
+      
+      if (startPage > 1) {
+        html.push(`<button class="pg-btn" onclick="C.setPage(1)">1</button>`);
+        if (startPage > 2) html.push(`<span style="color:var(--txt2);padding:0 4px;">...</span>`);
+      }
+      
+      for (let i = startPage; i <= endPage; i++) {
+        html.push(`<button class="pg-btn${i === this.currentPage ? ' active' : ''}" onclick="C.setPage(${i})">${i}</button>`);
+      }
+      
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) html.push(`<span style="color:var(--txt2);padding:0 4px;">...</span>`);
+        html.push(`<button class="pg-btn" onclick="C.setPage(${totalPages})">${totalPages}</button>`);
+      }
+      
+      html.push(`<button class="pg-btn" ${this.currentPage === totalPages ? 'disabled' : ''} onclick="C.setPage(${this.currentPage + 1})">Next ›</button>`);
+      html.push(`
+        <div class="pg-jump-wrap">
+          <span style="color:var(--txt2);font-size:0.82rem;font-weight:700;">Go:</span>
+          <input type="text" id="pg-jump-input" class="pg-jump-input" value="${this.currentPage}" onkeydown="if(event.key==='Enter')C.jumpPage(this.value, ${totalPages})">
+        </div>
+      `);
+      html.push(`</div>`);
+      
+      container.innerHTML = html.join('');
+    },
 
     async init() {
       document.getElementById('fyr').textContent = new Date().getFullYear();
@@ -562,7 +828,11 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       el.querySelectorAll('.cbtn').forEach(b => {
         b.onclick = () => {
           el.querySelectorAll('.cbtn').forEach(x=>x.classList.remove('active'));
-          b.classList.add('active'); this.cat = b.dataset.cat; this.renderGrid();
+          b.classList.add('active'); 
+          this.cat = b.dataset.cat; 
+          this.currentPage = 1;
+          this.syncHash();
+          this.renderGrid();
         };
       });
     },
@@ -621,18 +891,29 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
     toggleFSize(sz) {
       const arr = this.filters.sizes;
       const i = arr.indexOf(sz); if(i>=0) arr.splice(i,1); else arr.push(sz);
+      this.currentPage = 1; this.syncHash();
       if(this._fopen) this.buildFilters(); this.renderGrid(); this.updateFilterUI();
     },
     toggleFColor(clrV) {
       const arr = this.filters.colors;
       const i = arr.indexOf(clrV); if(i>=0) arr.splice(i,1); else arr.push(clrV);
+      this.currentPage = 1; this.syncHash();
       if(this._fopen) this.buildFilters(); this.renderGrid(); this.updateFilterUI();
     },
-    setAvail(v) { this.filters.avail = v; if(this._fopen) this.buildFilters(); this.renderGrid(); this.updateFilterUI(); },
-    setSort(v) { this.sort = v; this.renderGrid(); },
+    setAvail(v) { 
+      this.filters.avail = v; 
+      this.currentPage = 1; this.syncHash();
+      if(this._fopen) this.buildFilters(); this.renderGrid(); this.updateFilterUI(); 
+    },
+    setSort(v) { 
+      this.sort = v; 
+      this.currentPage = 1; this.syncHash();
+      this.renderGrid(); 
+    },
     clearFilters() {
       this.filters = { sizes:[], colors:[], minPrice:'', maxPrice:'', avail:'all' };
       this.sort = ''; document.getElementById('sort-sel').value = '';
+      this.currentPage = 1; this.syncHash();
       if(this._fopen) this.buildFilters();
       this.renderGrid(); this.updateFilterUI();
     },
@@ -651,10 +932,6 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       const chips = [];
       this.filters.sizes.forEach(s => chips.push(`<span class="fchip" onclick="C.toggleFSize('${e(s)}')">📐 ${e(s)} <span class="fx">✕</span></span>`));
       this.filters.colors.forEach(c => chips.push(`<span class="fchip" onclick="C.toggleFColor('${e(c)}')" style="gap:6px"><span class="cdot-f" style="background:${clr(c)};width:10px;height:10px;"></span>${e(c)} <span class="fx">✕</span></span>`));
-      if (this.filters.minPrice) chips.push(`<span class="fchip" onclick="C.filters.minPrice='';C.renderGrid();C.updateFilterUI()">₹≥${this.filters.minPrice} <span class="fx">✕</span></span>`);
-      if (this.filters.maxPrice) chips.push(`<span class="fchip" onclick="C.filters.maxPrice='';C.renderGrid();C.updateFilterUI()">₹≤${this.filters.maxPrice} <span class="fx">✕</span></span>`);
-      if (this.filters.avail === 'in') chips.push(`<span class="fchip" onclick="C.setAvail('all')">✅ In Stock <span class="fx">✕</span></span>`);
-      if (this.filters.avail === 'out') chips.push(`<span class="fchip" onclick="C.setAvail('all')">❌ Sold Out <span class="fx">✕</span></span>`);
       if (this.sort) chips.push(`<span class="fchip" onclick="C.setSort('');document.getElementById('sort-sel').value=''">↕ ${document.getElementById('sort-sel')?.selectedOptions[0]?.text||'Sort'} <span class="fx">✕</span></span>`);
       chipsEl.innerHTML = chips.join('');
     },
@@ -715,14 +992,44 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       else if (this.sort === 'price-desc') fl.sort((a,b)=>(minP(b)||0)-(minP(a)||0));
       else if (this.sort === 'newest') fl.sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
 
-      const activeF = this.countActiveFilters();
-      const cntTxt = fl.length
-        ? `Showing <span>${fl.length}</span> of <span>${AP.length}</span> styles${activeF ? ` <span style="color:var(--acc);font-size:0.78rem;">(${activeF} filter${activeF>1?'s':''})</span>` : ''}`
-        : '';
-      document.getElementById('pcnt').innerHTML = cntTxt;
-      if (!fl.length) return grid.innerHTML = `<div class="state"><h3>No matches found</h3><p>Try adjusting filters or search term.</p><button onclick="C.clearFilters()" style="margin-top:16px;padding:10px 24px;background:var(--acc);color:#fff;border:none;border-radius:var(--rf);font-weight:800;cursor:pointer;font-family:inherit;font-size:0.9rem;">✕ Clear All Filters</button></div>`;
+      const totalItems = fl.length;
+      const totalPages = Math.ceil(totalItems / this.itemsPerPage) || 1;
+      
+      // Auto-correct page limits in case filtering shrunk the results
+      if (this.currentPage > totalPages) {
+        this.currentPage = totalPages;
+      }
+      if (this.currentPage < 1) {
+        this.currentPage = 1;
+      }
 
-      grid.innerHTML = fl.map(p => {
+      const activeF = this.countActiveFilters();
+      
+      // Dynamic catalog status range showing number of images on the current page
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      const paginated = fl.slice(start, start + this.itemsPerPage);
+      const shownCount = paginated.length;
+      
+      const statusHTML = totalItems
+        ? `Showing <span>${shownCount}</span> styles of Page <span>${this.currentPage}</span> of <span>${totalPages}</span>${activeF ? ` <span style="color:var(--acc);font-size:0.78rem;font-weight:700;">(filtered)</span>` : ''}`
+        : '';
+      
+      document.getElementById('pcnt').innerHTML = statusHTML;
+      const hdrStatus = document.getElementById('hdr-pg-status');
+      if (hdrStatus) {
+        hdrStatus.innerHTML = statusHTML;
+        hdrStatus.style.display = totalItems > this.itemsPerPage ? 'inline-block' : 'none';
+      }
+
+      if (!totalItems) {
+        document.getElementById('pg-bottom').style.display = 'none';
+        return grid.innerHTML = `<div class="state"><h3>No matches found</h3><p>Try adjusting filters or search term.</p><button onclick="C.clearFilters()" style="margin-top:16px;padding:10px 24px;background:var(--acc);color:#fff;border:none;border-radius:var(--rf);font-weight:800;cursor:pointer;font-family:inherit;font-size:0.9rem;">✕ Clear All Filters</button></div>`;
+      }
+
+      // Draw pagination controls below
+      this.renderPagination(totalItems);
+
+      grid.innerHTML = paginated.map(p => {
         const pcode = code(p);
         const price = minP(p);
         const ph = p.photos?.[0]?.data;
@@ -755,6 +1062,15 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       const m = document.getElementById('det-m');
       // Reset state on each open
       m.dataset.pid = id; m.dataset.szs = '[]'; delete m.dataset.sz;
+
+      // Push/Replace history state for back button navigation
+      if (history.state?.pid !== id) {
+        if (location.hash === '#' + encodeURIComponent(id)) {
+          history.replaceState({ modal: 'detail', pid: id }, '', '#' + encodeURIComponent(id));
+        } else {
+          history.pushState({ modal: 'detail', pid: id }, '', '#' + encodeURIComponent(id));
+        }
+      }
 
       const pcode = code(p);
       const price = minP(p);
@@ -844,7 +1160,11 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
     },
     closeM(id) {
       const el=document.getElementById(id); if(el) el.classList.remove('open');
-      if(id==='det-m') history.replaceState(null,'',location.href.split('#')[0]);
+      if (history.state && (history.state.modal === 'detail' || history.state.modal === 'basket')) {
+        history.back();
+      } else {
+        if(id==='det-m') history.replaceState(null,'',location.href.split('#')[0]);
+      }
     },
 
     loadIQ() { try { const s=localStorage.getItem('bq_bask'); if(s)this.iq=JSON.parse(s); }catch(e){} this.uFAB(); },
@@ -894,7 +1214,13 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
         </div>`;
       }).join('');
     },
-    openIQ() { this.renderIQ(); document.getElementById('iq-m').classList.add('open'); },
+    openIQ() { 
+      this.renderIQ(); 
+      document.getElementById('iq-m').classList.add('open'); 
+      if (location.hash !== '#basket') {
+        history.pushState({ modal: 'basket' }, '', '#basket');
+      }
+    },
     _waPhone() {
       const wa = _settings.whatsappNumber || (D&&D.settings&&D.settings.whatsappNumber) || '';
       return wa.replace(/\D/g,'');
@@ -998,12 +1324,34 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       });
     },
     bind() {
-      // Hash-based deep linking: auto-open product from URL
+      // Hash-based deep linking: auto-open product from URL or load catalog params
       const hash = decodeURIComponent(location.hash.slice(1));
       if (hash) {
         const p = AP.find(x=>x.id===hash);
-        if (p) setTimeout(()=>this.det(hash), 300);
+        if (p) {
+          setTimeout(()=>this.det(hash), 300);
+        } else {
+          this.loadFromHash();
+        }
       }
+      
+      // Dynamic popstate physical back key interceptor
+      window.onpopstate = (event) => {
+        const hasDet = document.getElementById('det-m').classList.contains('open');
+        const hasIq = document.getElementById('iq-m').classList.contains('open');
+        
+        if (event.state && event.state.modal === 'detail') {
+          if (event.state.pid) this.det(event.state.pid);
+        } else if (event.state && event.state.modal === 'basket') {
+          this.openIQ();
+        } else {
+          document.getElementById('det-m').classList.remove('open');
+          document.getElementById('iq-m').classList.remove('open');
+          
+          this.loadFromHash();
+          this.renderGrid();
+        }
+      };
       
       // Typewriter Effect
       const tips = ['Search for Green...','Search for Cotton...','Search for Kurtis...','Search for Designers...','Search for ID: MGB...'];
@@ -1025,6 +1373,8 @@ body{font-family:'Outfit',system-ui,sans-serif;background:#09090b;color:#f8fafc;
       document.getElementById('sinput').oninput = ev => {
         const val = ev.target.value.trim().toLowerCase();
         this.q = val;
+        this.currentPage = 1; // Reset to page 1 on new search query
+        this.syncHash();
         const resEl = document.getElementById('ss-results');
         if(!val) { resEl.style.display='none'; this.renderGrid(); return; }
         
