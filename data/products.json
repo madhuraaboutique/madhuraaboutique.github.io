@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa Boutique",
   "tagline": "Elegance Refined",
-  "lastUpdated": "2026-05-20T13:23:18.103Z",
+  "lastUpdated": "2026-05-20T16:34:00.731Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "9344676161",
@@ -50,7 +50,7 @@
               "size": "XXL 44",
               "sellPrice": 730,
               "stock": 1
-            },
+            }
           ]
         }
       ]
@@ -1225,7 +1225,47 @@
               "sellPrice": 870,
               "stock": 1
             },
-        
+            {
+              "size": "XL 42",
+              "sellPrice": 870,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mpe58ce0wgife0l7i",
+      "name": "Cotton Coord with full lining",
+      "productNumber": 34,
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "cotton with lining",
+      "tags": [
+        "cotton"
+      ],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_034_0.jpg",
+          "color": "blue"
+        }
+      ],
+      "variants": [
+        {
+          "color": "blue",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 870,
+              "stock": 1
+            },
             {
               "size": "XL 42",
               "sellPrice": 870,
