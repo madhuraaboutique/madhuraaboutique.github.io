@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa Boutique",
   "tagline": "Elegance Refined",
-  "lastUpdated": "2026-05-17T07:15:37.284Z",
+  "lastUpdated": "2026-05-20T13:23:18.103Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "9344676161",
@@ -962,6 +962,283 @@
               "size": "XXL 44",
               "sellPrice": 750,
               "stock": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mpe2s9x0lmffzkeky",
+      "name": "Cotton Coord with full lining",
+      "productNumber": 27,
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "cotton with lining, pink blossom",
+      "tags": [
+        "cotton"
+      ],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_1/prod_027_0.jpg",
+          "color": "white"
+        }
+      ],
+      "variants": [
+        {
+          "color": "white",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 920,
+              "stock": 2
+            },
+            {
+              "size": "M 38",
+              "sellPrice": 920,
+              "stock": 2
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 920,
+              "stock": 2
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 920,
+              "stock": 2
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 920,
+              "stock": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mpe2zuup35jqt9kew",
+      "name": "Cotton Coord with full lining",
+      "productNumber": 28,
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "cotton with lining",
+      "tags": [
+        "cotton"
+      ],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_028_0.jpg",
+          "color": "blue"
+        }
+      ],
+      "variants": [
+        {
+          "color": "blue",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "M 38",
+              "sellPrice": 870,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mpe32km63gqftl5ut",
+      "name": "Cotton Coord with full lining",
+      "productNumber": 29,
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "cotton with lining",
+      "tags": [
+        "cotton"
+      ],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_029_0.jpg",
+          "color": "floral pink"
+        }
+      ],
+      "variants": [
+        {
+          "color": "floral pink",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "M 38",
+              "sellPrice": 870,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mpe35azaoqfi87qgw",
+      "name": "Cotton Coord with full lining",
+      "productNumber": 30,
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "cotton with lining",
+      "tags": [
+        "cotton"
+      ],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_030_0.jpg",
+          "color": "red"
+        }
+      ],
+      "variants": [
+        {
+          "color": "red",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "M 38",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 870,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mpe3a4wt4yt9e6f7d",
+      "name": "coord premium vatican high neck",
+      "productNumber": 32,
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "vatican",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_032_0.jpg",
+          "color": "peach"
+        }
+      ],
+      "variants": [
+        {
+          "color": "peach",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "XL",
+              "sellPrice": 870,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mpe3cpnlbk0i620g9",
+      "name": "coord premium vatican high neck (Copy)",
+      "productNumber": 33,
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "vatican",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_033_0.jpg",
+          "color": "purple"
+        }
+      ],
+      "variants": [
+        {
+          "color": "purple",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 870,
+              "stock": 1
             }
           ]
         }
