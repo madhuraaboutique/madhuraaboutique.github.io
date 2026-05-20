@@ -124,13 +124,16 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
     max-width: 95px;
   }
   .catbar {
-    top: 80px !important;
+    top: 80px !important;  /* default: brand + search+filter rows */
     padding: 6px 12px;
     gap: 6px;
     transition: top 0.2s ease;
   }
+  .topnav.has-pg ~ .catbar {
+    top: 110px !important; /* extra row for page nav */
+  }
   .topnav.scrolled ~ .catbar {
-    top: 48px !important;
+    top: 48px !important;  /* collapsed: only search+filter row */
   }
   .filterbar {
     padding: 4px 12px;
@@ -479,7 +482,7 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
   40%, 80% { transform: translateX(6px); }
 }
 
-/* Page status near search bar (Header pagination navigation) */
+/* Page navigation widget in header */
 .hdr-pg-nav {
   display: inline-flex;
   align-items: center;
@@ -489,24 +492,27 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
   padding: 2px 6px;
   border-radius: var(--rf);
   height: 30px;
+  flex-shrink: 0;
 }
 .hdr-pg-btn {
   background: transparent;
   border: none;
   color: var(--txt);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 800;
-  width: 22px;
-  height: 22px;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   border-radius: 50%;
   transition: var(--tr);
+  padding: 0;
 }
 .hdr-pg-btn:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   color: var(--acc);
 }
 .hdr-pg-btn:disabled {
@@ -514,11 +520,22 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
   cursor: not-allowed;
 }
 .hdr-pg-txt {
-  font-size: 0.75rem;
-  color: var(--txt2);
-  font-weight: 700;
-  padding: 0 2px;
+  font-size: 0.78rem;
+  color: var(--txt);
+  font-weight: 800;
+  padding: 0 3px;
+  white-space: nowrap;
   user-select: none;
+}
+/* On mobile: span the nav widget full width as its own row */
+@media(max-width: 600px) {
+  .hdr-pg-nav {
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-content: center;
+    height: 28px;
+    gap: 8px;
+  }
 }
 
 /* Silky Grid Page Transition */
@@ -599,11 +616,6 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
     <div id="ss-results" class="ss-wrap"></div>
   </div>
   <div class="srch-extra">
-    <div class="hdr-pg-nav" id="hdr-pg-nav" style="display:none">
-      <button class="hdr-pg-btn" id="hdr-pg-prev" onclick="C.setPage(C.currentPage - 1)">‹</button>
-      <span class="hdr-pg-txt" id="hdr-pg-txt">1 / 1</span>
-      <button class="hdr-pg-btn" id="hdr-pg-next" onclick="C.setPage(C.currentPage + 1)">›</button>
-    </div>
     <button class="fbtn-mini" id="filter-toggle" onclick="C.toggleFilters()">
       🎛️ <span class="fbtn-text">Filters</span> <span class="fbadge2" id="factive-cnt" style="display:none">0</span>
     </button>
@@ -615,6 +627,11 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
       <option value="price-desc">₹ High</option>
       <option value="newest">New</option>
     </select>
+  </div>
+  <div class="hdr-pg-nav" id="hdr-pg-nav" style="display:none">
+    <button class="hdr-pg-btn" id="hdr-pg-prev" onclick="C.setPage(C.currentPage - 1)">&#8249;</button>
+    <span class="hdr-pg-txt" id="hdr-pg-txt">1/1</span>
+    <button class="hdr-pg-btn" id="hdr-pg-next" onclick="C.setPage(C.currentPage + 1)">&#8250;</button>
   </div>
   <button class="fab hide" id="fab">🛍️ <span class="fbadge" id="fcnt">0</span></button>
 </nav>
@@ -812,10 +829,12 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
         const txtEl = document.getElementById('hdr-pg-txt');
         const prevEl = document.getElementById('hdr-pg-prev');
         const nextEl = document.getElementById('hdr-pg-next');
+        const showNav = totalItems > this.itemsPerPage;
         if (txtEl) txtEl.textContent = `${this.currentPage}/${totalPages}`;
         if (prevEl) prevEl.disabled = this.currentPage === 1;
         if (nextEl) nextEl.disabled = this.currentPage === totalPages;
-        hdrNav.style.display = totalItems > this.itemsPerPage ? 'inline-flex' : 'none';
+        hdrNav.style.display = showNav ? 'inline-flex' : 'none';
+        document.querySelector('.topnav').classList.toggle('has-pg', showNav);
       }
       
       html.push(`<div class="pg-controls">`);
@@ -1254,10 +1273,13 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
         const txtEl = document.getElementById('hdr-pg-txt');
         const prevEl = document.getElementById('hdr-pg-prev');
         const nextEl = document.getElementById('hdr-pg-next');
+        const showNav = totalItems > this.itemsPerPage;
         if (txtEl) txtEl.textContent = `${this.currentPage}/${totalPages}`;
         if (prevEl) prevEl.disabled = this.currentPage === 1;
         if (nextEl) nextEl.disabled = this.currentPage === totalPages;
-        hdrNav.style.display = totalItems > this.itemsPerPage ? 'inline-flex' : 'none';
+        hdrNav.style.display = showNav ? 'inline-flex' : 'none';
+        // Toggle class so CSS catbar offset adjusts automatically on mobile
+        document.querySelector('.topnav').classList.toggle('has-pg', showNav);
       }
 
       if (!totalItems) {
