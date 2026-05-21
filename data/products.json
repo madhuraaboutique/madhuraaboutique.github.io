@@ -1,11 +1,11 @@
 {
-  "shopName": "Madhuraa",
-  "tagline": "",
-  "lastUpdated": "2026-05-21T17:33:05.144Z",
+  "shopName": "Madhuraa Boutique",
+  "tagline": "Elegance Refined",
+  "lastUpdated": "2026-05-21T17:51:44.093Z",
   "settings": {
-    "shopInitials": "Mg",
-    "phone": "",
-    "whatsappNumber": "",
+    "shopInitials": "MG",
+    "phone": "9344676161",
+    "whatsappNumber": "9344676161",
     "instagramHandle": "",
     "themeAccent": "#6366f1",
     "themeAccent2": "#ec4899",
@@ -18,31 +18,6 @@
       "id": "mou6d0zs4bl8w31ya",
       "name": "Coord",
       "emoji": "📦"
-    },
-    {
-      "id": "mpfqzkl4jdgeaq3v9",
-      "name": "Salwar",
-      "emoji": "👘"
-    },
-    {
-      "id": "mpfqzkl4kudllmmbw",
-      "name": "Kurti",
-      "emoji": "👗"
-    },
-    {
-      "id": "mpfqzkl4qt41t6wwi",
-      "name": "Western",
-      "emoji": "👖"
-    },
-    {
-      "id": "mpfqzkl4ryj97efne",
-      "name": "Dresses",
-      "emoji": "👗"
-    },
-    {
-      "id": "mpfqzkl4xu93k47n5",
-      "name": "Tops",
-      "emoji": "👚"
     }
   ],
   "products": [
@@ -60,7 +35,7 @@
       "videoLink": "https://www.instagram.com/reel/DXwZNJmPSXt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_001_0.jpg",
           "color": "Purple"
         }
       ],
@@ -96,7 +71,7 @@
       "videoLink": "https://www.instagram.com/reel/DXwZNJmPSXt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_002_0.jpg",
           "color": "Red"
         }
       ],
@@ -142,7 +117,7 @@
       "videoLink": "https://www.instagram.com/reel/DXwZNJmPSXt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_003_0.jpg",
           "color": "Mahandi green"
         }
       ],
@@ -188,7 +163,7 @@
       "videoLink": "https://www.instagram.com/reel/DXwZNJmPSXt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_004_0.jpg",
           "color": "Bottle green"
         }
       ],
@@ -237,7 +212,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_005_0.jpg",
           "color": "Mahandi green"
         }
       ],
@@ -266,7 +241,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_007_0.jpg",
           "color": ""
         }
       ],
@@ -297,7 +272,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_009_0.jpg",
           "color": ""
         }
       ],
@@ -343,7 +318,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_010_0.jpg",
           "color": "Ink Blue"
         }
       ],
@@ -389,7 +364,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_011_0.jpg",
           "color": "Wine color"
         }
       ],
@@ -430,7 +405,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_012_0.jpg",
           "color": "Pasta Green"
         }
       ],
@@ -474,11 +449,11 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_014_0.jpg",
           "color": "rani pink"
         },
         {
-          "data": "",
+          "data": "images/page_1/prod_014_1.jpg",
           "color": "rani pink"
         }
       ],
@@ -512,11 +487,11 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_015_0.jpg",
           "color": "yellow"
         },
         {
-          "data": "",
+          "data": "images/page_1/prod_015_1.jpg",
           "color": "yellow"
         }
       ],
@@ -555,11 +530,11 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_016_0.jpg",
           "color": "Purple"
         },
         {
-          "data": "",
+          "data": "images/page_1/prod_016_1.jpg",
           "color": "Purple"
         }
       ],
@@ -595,7 +570,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_017_0.jpg",
           "color": "blue"
         }
       ],
@@ -642,7 +617,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_018_0.jpg",
           "color": "blue"
         }
       ],
@@ -679,7 +654,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_019_0.jpg",
           "color": "Red"
         }
       ],
@@ -726,7 +701,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_020_0.jpg",
           "color": "yellow"
         }
       ],
@@ -772,7 +747,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_021_0.jpg",
           "color": "lemon yellow"
         }
       ],
@@ -803,7 +778,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_022_0.jpg",
           "color": "dark green"
         }
       ],
@@ -834,7 +809,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_023_0.jpg",
           "color": "Red"
         }
       ],
@@ -880,7 +855,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_024_0.jpg",
           "color": "orange"
         }
       ],
@@ -921,7 +896,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_025_0.jpg",
           "color": "Red"
         }
       ],
@@ -952,7 +927,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_026_0.jpg",
           "color": "yellow"
         }
       ],
@@ -993,7 +968,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_1/prod_027_0.jpg",
           "color": "white"
         }
       ],
@@ -1039,7 +1014,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_2/prod_028_0.jpg",
           "color": "blue"
         }
       ],
@@ -1085,7 +1060,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_2/prod_029_0.jpg",
           "color": "floral pink"
         }
       ],
@@ -1131,7 +1106,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_2/prod_030_0.jpg",
           "color": "red"
         }
       ],
@@ -1175,7 +1150,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_2/prod_032_0.jpg",
           "color": "peach"
         }
       ],
@@ -1204,7 +1179,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_2/prod_033_0.jpg",
           "color": "purple"
         }
       ],
@@ -1240,7 +1215,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "",
+          "data": "images/page_2/prod_034_0.jpg",
           "color": "blue"
         }
       ],
