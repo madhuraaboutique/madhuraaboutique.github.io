@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa Boutique",
   "tagline": "Elegance Refined",
-  "lastUpdated": "2026-05-21T07:22:10.066Z",
+  "lastUpdated": "2026-05-21T08:35:06.537Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "9344676161",
@@ -9,7 +9,9 @@
     "instagramHandle": "",
     "themeAccent": "#6366f1",
     "themeAccent2": "#ec4899",
-    "themeBg": "dark"
+    "themeBg": "dark",
+    "showBanner": true,
+    "bannerText": "Inside Tamilandu shipping 50 other State 80"
   },
   "categories": [
     {

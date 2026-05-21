@@ -482,6 +482,37 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
   40%, 80% { transform: translateX(6px); }
 }
 
+/* Alert/News Announcement Banner styling */
+.alert-banner {
+  background: linear-gradient(90deg, var(--acc2), var(--acc));
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  z-index: 210;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+.alert-banner-content {
+  display: inline-block;
+  animation: banner-marquee 25s linear infinite;
+  padding-right: 50px;
+}
+.alert-banner-content:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+@keyframes banner-marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
 /* Page navigation widget in header */
 .hdr-pg-nav {
   display: inline-flex;
@@ -608,6 +639,10 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
 </head>
 <body>
 
+<div id="storefront-alert-banner" class="alert-banner" style="display:none;">
+  <div class="alert-banner-content" id="alert-banner-text"></div>
+</div>
+
 <nav class="topnav">
   <div class="brand" id="nbrand">Mg Madhuraa Boutique<small id="ntag">Elegance Redefined</small></div>
   <div class="srchwrap" style="overflow:visible;">
@@ -733,33 +768,40 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
       const newHash = params.toString();
       const currentHash = location.hash.slice(1);
       if (newHash !== currentHash && !newHash.startsWith('basket') && !currentHash.startsWith('basket')) {
-        history.replaceState({ cat: this.cat, page: this.currentPage }, '', newHash ? '#' + newHash : '');
+        history.replaceState({ cat: this.cat, page: this.currentPage }, '', location.pathname + location.search + (newHash ? '#' + newHash : ''));
       }
     },
 
     loadFromHash() {
       const hash = location.hash.slice(1);
-      if (!hash) return;
+      if (!hash) {
+        this.cat = 'all';
+        this.currentPage = 1;
+        const catbar = document.getElementById('catbar');
+        if (catbar) {
+          catbar.querySelectorAll('.cbtn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.cat === 'all');
+          });
+        }
+        return;
+      }
       if (hash.length > 15 && !hash.includes('=')) return; // Direct product link
       if (hash === 'basket') return; // Basket hash
       
       const params = new URLSearchParams(hash);
-      const cat = params.get('cat');
-      const page = params.get('page');
+      const cat = params.get('cat') || 'all';
+      const page = params.get('page') || '1';
       
-      if (cat) {
-        this.cat = cat;
-        const catbar = document.getElementById('catbar');
-        if (catbar) {
-          catbar.querySelectorAll('.cbtn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.cat === cat);
-          });
-        }
+      this.cat = cat;
+      const catbar = document.getElementById('catbar');
+      if (catbar) {
+        catbar.querySelectorAll('.cbtn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.cat === cat);
+        });
       }
-      if (page) {
-        const pNum = parseInt(page);
-        if (pNum && pNum > 0) this.currentPage = pNum;
-      }
+      
+      const pNum = parseInt(page);
+      this.currentPage = (pNum && pNum > 0) ? pNum : 1;
     },
 
     setPage(p) {
@@ -862,7 +904,7 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
       html.push(`
         <div class="pg-jump-wrap">
           <span style="color:var(--txt2);font-size:0.82rem;font-weight:700;">Go:</span>
-          <input type="text" id="pg-jump-input" class="pg-jump-input" value="${this.currentPage}" onkeydown="if(event.key==='Enter')C.jumpPage(this.value, ${totalPages})">
+          <input type="text" inputmode="numeric" pattern="[0-9]*" id="pg-jump-input" class="pg-jump-input" value="${this.currentPage}" onkeydown="if(event.key==='Enter'){event.preventDefault();C.jumpPage(this.value, ${totalPages});}" onblur="if(this.value && parseInt(this.value) !== C.currentPage) C.jumpPage(this.value, ${totalPages})">
         </div>
       `);
       html.push(`</div>`);
@@ -968,7 +1010,7 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
           const tx = db.transaction(storeNames, 'readonly');
           let products = [], categories = [];
           let sVals = {}, sExpected = 0, sDone = 0;
-          const sKeys = ['shopName','shopInitials','tagline','phone','whatsappNumber','instagramHandle'];
+          const sKeys = ['shopName','shopInitials','tagline','phone','whatsappNumber','instagramHandle','shopThemeAccent','shopThemeAccent2','shopThemeBg','shopShowBanner','shopBannerText'];
 
           const pReq = tx.objectStore('products').getAll();
           const cReq = storeNames.includes('categories') ? tx.objectStore('categories').getAll() : null;
@@ -1002,7 +1044,12 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
                 shopInitials: sVals.shopInitials||'RB',
                 phone: sVals.phone||'',
                 whatsappNumber: sVals.whatsappNumber||'',
-                instagramHandle: sVals.instagramHandle||''
+                instagramHandle: sVals.instagramHandle||'',
+                themeAccent: sVals.shopThemeAccent||'',
+                themeAccent2: sVals.shopThemeAccent2||'',
+                themeBg: sVals.shopThemeBg||'dark',
+                showBanner: sVals.shopShowBanner === 'true' || sVals.shopShowBanner === true,
+                bannerText: sVals.shopBannerText || ''
               },
               categories: categories.map(c => ({id:c.id, name:c.name, emoji:c.emoji||'💎'})),
               products: products
@@ -1029,7 +1076,7 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
       _settings = data.settings || {}; // save for WhatsApp functions
       const sn = data.shopName||'Mg Madhuraa Boutique';
       const tg = data.tagline||'';
-      const {phone, whatsappNumber, instagramHandle, themeAccent, themeAccent2, themeBg} = _settings;
+      const {phone, whatsappNumber, instagramHandle, themeAccent, themeAccent2, themeBg, showBanner, bannerText} = _settings;
 
       // Apply custom theme colors from admin settings
       const root = document.documentElement;
@@ -1061,6 +1108,19 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none;}
       if (whatsappNumber) document.getElementById('fwa').innerHTML = '💬 ' + whatsappNumber;
       if (instagramHandle) document.getElementById('fig').innerHTML = '📸 @' + instagramHandle;
       
+      // Render news alert banner
+      const banner = document.getElementById('storefront-alert-banner');
+      const bannerTxt = document.getElementById('alert-banner-text');
+      if (banner && bannerTxt) {
+        if (showBanner && bannerText) {
+          // Double the banner text for seamless looping marquee
+          bannerTxt.innerHTML = `${bannerText} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${bannerText}`;
+          banner.style.display = 'flex';
+        } else {
+          banner.style.display = 'none';
+        }
+      }
+
       this.renderCats(data.categories||[]);
       this.renderGrid();
       this.loadIQ();
