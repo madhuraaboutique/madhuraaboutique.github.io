@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa Boutique",
   "tagline": "Elegance Refined",
-  "lastUpdated": "2026-05-20T18:02:00.113Z",
+  "lastUpdated": "2026-05-21T05:10:47.991Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "9344676161",
@@ -542,11 +542,6 @@
           "sizes": [
             {
               "size": "M 38",
-              "sellPrice": 699,
-              "stock": 1
-            },
-            {
-              "size": "L 40",
               "sellPrice": 699,
               "stock": 1
             },
@@ -1173,11 +1168,6 @@
           "sizes": [
             {
               "size": "S 36",
-              "sellPrice": 870,
-              "stock": 1
-            },
-            {
-              "size": "XL",
               "sellPrice": 870,
               "stock": 1
             }
