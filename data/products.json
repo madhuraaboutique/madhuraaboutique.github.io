@@ -1,11 +1,11 @@
 {
-  "shopName": "Madhuraa Boutique",
-  "tagline": "Elegance Refined",
-  "lastUpdated": "2026-05-23T05:22:14.952Z",
+  "shopName": "Madhuraa",
+  "tagline": "",
+  "lastUpdated": "2026-05-24T13:01:13.321Z",
   "settings": {
     "shopInitials": "MG",
-    "phone": "9344676161",
-    "whatsappNumber": "9344676161",
+    "phone": "",
+    "whatsappNumber": "",
     "instagramHandle": "",
     "themeAccent": "#6366f1",
     "themeAccent2": "#ec4899",
@@ -18,6 +18,31 @@
       "id": "mou6d0zs4bl8w31ya",
       "name": "Coord",
       "emoji": "📦"
+    },
+    {
+      "id": "mphxyakq0sihe7j34",
+      "name": "Salwar",
+      "emoji": "👘"
+    },
+    {
+      "id": "mphxyakq48lywg38v",
+      "name": "Dresses",
+      "emoji": "👗"
+    },
+    {
+      "id": "mphxyakq9voszwe83",
+      "name": "Western",
+      "emoji": "👖"
+    },
+    {
+      "id": "mphxyakqeok9d29it",
+      "name": "Kurti",
+      "emoji": "👗"
+    },
+    {
+      "id": "mphxyakqg044c9wal",
+      "name": "Tops",
+      "emoji": "👚"
     }
   ],
   "products": [
@@ -500,11 +525,6 @@
           "color": "yellow",
           "sizes": [
             {
-              "size": "L 40",
-              "sellPrice": 699,
-              "stock": 1
-            },
-            {
               "size": "XL 42",
               "sellPrice": 699,
               "stock": 1
@@ -712,7 +732,7 @@
             {
               "size": "M 38",
               "sellPrice": 920,
-              "stock": 1
+              "stock": 2
             },
             {
               "size": "L 40",
@@ -1034,6 +1054,11 @@
             },
             {
               "size": "XXL 44",
+              "sellPrice": 870,
+              "stock": 1
+            },
+            {
+              "size": "M 38",
               "sellPrice": 870,
               "stock": 1
             }
