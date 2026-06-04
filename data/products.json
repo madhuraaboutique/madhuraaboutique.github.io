@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa",
   "tagline": "",
-  "lastUpdated": "2026-06-01T06:47:41.268Z",
+  "lastUpdated": "2026-06-04T07:48:07.613Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "",
@@ -43,6 +43,11 @@
       "id": "mphxyakqg044c9wal",
       "name": "Tops",
       "emoji": "👚"
+    },
+    {
+      "id": "mpy0x3lknwp8rh7i5",
+      "name": "3 pcs set",
+      "emoji": "📦"
     }
   ],
   "products": [
@@ -1241,6 +1246,118 @@
             {
               "size": "XL 42",
               "sellPrice": 870,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mpy10czi1wc2tcd9d",
+      "name": "Premium Jaipur cotton 3pc set",
+      "productNumber": 1,
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Cotton,60*60 cotton , Jaipur cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_001_0.jpg",
+          "color": "Maroon"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Maroon",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 1299,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 1299,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mpy10x5ro4uyldxpr",
+      "name": "Premium Jaipur cotton 3pc set",
+      "productNumber": 2,
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Khadi cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_002_0.jpg",
+          "color": "white"
+        }
+      ],
+      "variants": [
+        {
+          "color": "white",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 1299,
+              "stock": 1
+            }
+          ]
+        },
+        {
+          "color": "White",
+          "sizes": [
+            {
+              "size": "XL 42",
+              "sellPrice": 1299,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 1299,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mpy15te7okizidqqu",
+      "name": "Premium Jaipur cotton 3pc set",
+      "productNumber": 3,
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Cotton,60*60 cotton , Jaipur cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_003_0.jpg",
+          "color": "Musted yellow dark"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Musted yellow dark",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 1299,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 1299,
               "stock": 1
             }
           ]
