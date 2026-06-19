@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa",
   "tagline": "",
-  "lastUpdated": "2026-06-12T14:54:17.083Z",
+  "lastUpdated": "2026-06-19T02:02:53.888Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "",
@@ -65,8 +65,8 @@
       "videoLink": "https://www.instagram.com/reel/DXwZNJmPSXt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       "photos": [
         {
-          "color": "Purple",
           "data": "images/page_1/prod_001_0.jpg",
+          "color": "Purple",
           "tag": "General"
         }
       ],
@@ -102,8 +102,8 @@
       "videoLink": "https://www.instagram.com/reel/DXwZNJmPSXt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       "photos": [
         {
-          "color": "Red",
           "data": "images/page_1/prod_002_0.jpg",
+          "color": "Red",
           "tag": "General"
         }
       ],
@@ -213,7 +213,7 @@
             {
               "size": "L",
               "sellPrice": 730,
-              "stock": 1
+              "stock": 0
             },
             {
               "size": "XL",
@@ -246,8 +246,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "Mahandi green",
           "data": "images/page_1/prod_005_0.jpg",
+          "color": "Mahandi green",
           "tag": "General"
         }
       ],
@@ -276,8 +276,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "",
           "data": "images/page_1/prod_007_0.jpg",
+          "color": "",
           "tag": "General"
         }
       ],
@@ -288,7 +288,7 @@
             {
               "size": "S 36",
               "sellPrice": 870,
-              "stock": 1
+              "stock": 0
             }
           ]
         }
@@ -308,8 +308,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "",
           "data": "images/page_1/prod_009_0.jpg",
+          "color": "",
           "tag": "General"
         }
       ],
@@ -320,7 +320,7 @@
             {
               "size": "M 38",
               "sellPrice": 450,
-              "stock": 1
+              "stock": 0
             },
             {
               "size": "L 40",
@@ -330,12 +330,12 @@
             {
               "size": "XL 42",
               "sellPrice": 450,
-              "stock": 1
+              "stock": 0
             },
             {
               "size": "XXL 44",
               "sellPrice": 450,
-              "stock": 1
+              "stock": 0
             }
           ]
         }
@@ -355,8 +355,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "Ink Blue",
           "data": "images/page_1/prod_010_0.jpg",
+          "color": "Ink Blue",
           "tag": "General"
         }
       ],
@@ -377,7 +377,7 @@
             {
               "size": "XL 42",
               "sellPrice": 450,
-              "stock": 1
+              "stock": 0
             },
             {
               "size": "XXL 44",
@@ -402,8 +402,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "Wine color",
           "data": "images/page_1/prod_011_0.jpg",
+          "color": "Wine color",
           "tag": "General"
         }
       ],
@@ -444,8 +444,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "Pasta Green",
           "data": "images/page_1/prod_012_0.jpg",
+          "color": "Pasta Green",
           "tag": "General"
         }
       ],
@@ -471,7 +471,7 @@
             {
               "size": "XXL 44",
               "sellPrice": 499,
-              "stock": 1
+              "stock": 0
             }
           ]
         }
@@ -489,13 +489,13 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "rani pink",
           "data": "images/page_1/prod_014_0.jpg",
+          "color": "rani pink",
           "tag": "General"
         },
         {
-          "color": "rani pink",
           "data": "images/page_1/prod_014_1.jpg",
+          "color": "rani pink",
           "tag": "General"
         }
       ],
@@ -569,13 +569,13 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "Purple",
           "data": "images/page_1/prod_016_0.jpg",
+          "color": "Purple",
           "tag": "General"
         },
         {
-          "color": "Purple",
           "data": "images/page_1/prod_016_1.jpg",
+          "color": "Purple",
           "tag": "General"
         }
       ],
@@ -611,8 +611,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "blue",
           "data": "images/page_1/prod_017_0.jpg",
+          "color": "blue",
           "tag": "General"
         }
       ],
@@ -623,7 +623,7 @@
             {
               "size": "M 38",
               "sellPrice": 870,
-              "stock": 2
+              "stock": 1
             },
             {
               "size": "L 40",
@@ -633,12 +633,12 @@
             {
               "size": "XL 42",
               "sellPrice": 870,
-              "stock": 2
+              "stock": 1
             },
             {
               "size": "XXL 44",
               "sellPrice": 870,
-              "stock": 2
+              "stock": 1
             }
           ]
         }
@@ -692,8 +692,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "Red",
           "data": "images/page_1/prod_019_0.jpg",
+          "color": "Red",
           "tag": "General"
         }
       ],
@@ -787,8 +787,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "lemon yellow",
           "data": "images/page_1/prod_021_0.jpg",
+          "color": "lemon yellow",
           "tag": "General"
         }
       ],
@@ -819,8 +819,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "dark green",
           "data": "images/page_1/prod_022_0.jpg",
+          "color": "dark green",
           "tag": "General"
         }
       ],
@@ -831,7 +831,7 @@
             {
               "size": "XL 42",
               "sellPrice": 870,
-              "stock": 2
+              "stock": 0
             }
           ]
         }
@@ -851,8 +851,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "Red",
           "data": "images/page_1/prod_023_0.jpg",
+          "color": "Red",
           "tag": "General"
         }
       ],
@@ -898,8 +898,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "orange",
           "data": "images/page_1/prod_024_0.jpg",
+          "color": "orange",
           "tag": "General"
         }
       ],
@@ -940,8 +940,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "Red",
           "data": "images/page_1/prod_025_0.jpg",
+          "color": "Red",
           "tag": "General"
         }
       ],
@@ -972,8 +972,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "yellow",
           "data": "images/page_1/prod_026_0.jpg",
+          "color": "yellow",
           "tag": "General"
         }
       ],
@@ -1031,12 +1031,12 @@
             {
               "size": "M 38",
               "sellPrice": 920,
-              "stock": 1
+              "stock": 0
             },
             {
               "size": "XL 42",
               "sellPrice": 920,
-              "stock": 1
+              "stock": 0
             }
           ]
         }
@@ -1056,8 +1056,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "blue",
           "data": "images/page_2/prod_028_0.jpg",
+          "color": "blue",
           "tag": "General"
         }
       ],
@@ -1103,8 +1103,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "floral pink",
           "data": "images/page_2/prod_029_0.jpg",
+          "color": "floral pink",
           "tag": "General"
         }
       ],
@@ -1150,8 +1150,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "red",
           "data": "images/page_2/prod_030_0.jpg",
+          "color": "red",
           "tag": "General"
         }
       ],
@@ -1195,8 +1195,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "peach",
           "data": "images/page_2/prod_032_0.jpg",
+          "color": "peach",
           "tag": "General"
         }
       ],
@@ -1237,11 +1237,6 @@
             {
               "size": "S 36",
               "sellPrice": 870,
-              "stock": 1
-            },
-            {
-              "size": "XL 42",
-              "sellPrice": 870,
               "stock": 0
             }
           ]
@@ -1262,8 +1257,8 @@
       "videoLink": "",
       "photos": [
         {
-          "color": "blue",
           "data": "images/page_2/prod_034_0.jpg",
+          "color": "blue",
           "tag": "General"
         }
       ],
@@ -1309,12 +1304,12 @@
             {
               "size": "M 38",
               "sellPrice": 1299,
-              "stock": 1
+              "stock": 0
             },
             {
               "size": "L 40",
               "sellPrice": 1299,
-              "stock": 1
+              "stock": 0
             }
           ]
         }
@@ -1344,7 +1339,7 @@
             {
               "size": "L 40",
               "sellPrice": 1299,
-              "stock": 1
+              "stock": 0
             }
           ]
         },
@@ -1359,7 +1354,7 @@
             {
               "size": "XXL 44",
               "sellPrice": 1299,
-              "stock": 1
+              "stock": 0
             }
           ]
         }
@@ -1389,11 +1384,1341 @@
             {
               "size": "M 38",
               "sellPrice": 1299,
-              "stock": 1
+              "stock": 0
             },
             {
               "size": "L 40",
               "sellPrice": 1299,
+              "stock": 0
+            }
+          ]
+        },
+        {
+          "color": "Mustard yellow",
+          "sizes": [
+            {
+              "size": "3XL",
+              "sellPrice": 1299,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgbnv3068amtkpub",
+      "name": "Cotton kurti with lining",
+      "productNumber": "004",
+      "status": "active",
+      "categoryId": "mphxyakqeok9d29it",
+      "categoryName": "Kurti",
+      "description": "Cotton with full lining",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_004_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Blue with green",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 650,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 650,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgbyoq6tk3jvm5u1",
+      "name": "Mul chanderi kurti with lining",
+      "productNumber": "005",
+      "status": "active",
+      "categoryId": "mphxyakqeok9d29it",
+      "categoryName": "Kurti",
+      "description": "Full lining",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_005_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Green",
+          "sizes": [
+            {
+              "size": "XL 42",
+              "sellPrice": 790,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 790,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgc26zynzfji8iyt",
+      "name": "Kantha kurti with lining",
+      "productNumber": "006",
+      "status": "active",
+      "categoryId": "mphxyakqeok9d29it",
+      "categoryName": "Kurti",
+      "description": "Cotton with full lining",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_006_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Mahandi green",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 650,
+              "stock": 1
+            }
+          ]
+        },
+        {
+          "color": "Mehandi green",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 650,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 650,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 650,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgc5xxtefcxlesfr",
+      "name": "Raw silk coord",
+      "productNumber": "007",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Full lining",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_007_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Violet",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 899,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgc8xpt0skq4qkqc",
+      "name": "Raw silk coord",
+      "productNumber": "008",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Full lining",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_008_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Rani pink",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 899,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgcb7zeyym75wvtr",
+      "name": "Raw silk coord",
+      "productNumber": "009",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Full lining",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_009_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Pista green",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 899,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgcdu372opglaoy4",
+      "name": "Raw silk coord",
+      "productNumber": "010",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Full lining",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_010_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Blur",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 899,
+              "stock": 1
+            }
+          ]
+        },
+        {
+          "color": "Blue",
+          "sizes": [
+            {
+              "size": "Xl 42",
+              "sellPrice": 899,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgcg132hiykrm2bp",
+      "name": "Cotton batik 3pc set",
+      "productNumber": "011",
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "With full lining",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_011_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Rani pink",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 1150,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 1150,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 1150,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgcidlyfeorv54t1",
+      "name": "Cotton batik 3pc set",
+      "productNumber": "012",
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Cotton with full lining",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_012_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Blue",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 1150,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 1150,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 1150,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgda5uf8b2g38ch1",
+      "name": "Budget co ord",
+      "productNumber": "013",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_013_0.jpg",
+          "color": "",
+          "tag": "General"
+        },
+        {
+          "data": "images/page_2/prod_013_1.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Ramar green",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 499,
+              "stock": 1
+            },
+            {
+              "size": "M 38",
+              "sellPrice": 499,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgddadcmdk7ntne5",
+      "name": "Budget Coord",
+      "productNumber": "014",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_014_0.jpg",
+          "color": "",
+          "tag": "General"
+        },
+        {
+          "data": "images/page_2/prod_014_1.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Pista green",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 499,
+              "stock": 0
+            },
+            {
+              "size": "M 38",
+              "sellPrice": 499,
+              "stock": 1
+            },
+            {
+              "size": "Xl 42",
+              "sellPrice": 499,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgdei5augplghdt1",
+      "name": "Budget Coord",
+      "productNumber": "015",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_015_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Navy blue",
+          "sizes": [
+            {
+              "size": "S36",
+              "sellPrice": 499,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqgdg751gsuxctihj",
+      "name": "Budget Coord",
+      "productNumber": "016",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_016_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Mustard yellow",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 499,
+              "stock": 1
+            },
+            {
+              "size": "M38",
+              "sellPrice": 499,
+              "stock": 0
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 499,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhsgbktanicfhzjn",
+      "name": "Vatican co ord",
+      "productNumber": "017",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Vatican material",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_017_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Black",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 699,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 699,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 699,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhshbjvcuvlav2v3",
+      "name": "Vatican co ord",
+      "productNumber": "018",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Vatican material",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_2/prod_018_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Parrot green",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 699,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 699,
+              "stock": 1
+            },
+            {
+              "size": "Xl 42",
+              "sellPrice": 699,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 699,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhsjzovipmlc2yas",
+      "name": "Vatican co ord",
+      "productNumber": "019",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Vatican material",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_019_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Brown",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 699,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 699,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 699,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 699,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhsovblfe36m0jfo",
+      "name": "Ikkat coord",
+      "productNumber": "020",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Ikkat material",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_020_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Wine purple",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 699,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 699,
+              "stock": 1
+            },
+            {
+              "size": "Xl 42",
+              "sellPrice": 699,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 699,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhtg2x5vsble7xhm",
+      "name": "Budget Coord",
+      "productNumber": "021",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_021_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Blue",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 0,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhtiu1stniic0ykp",
+      "name": "Budget Coord",
+      "productNumber": "022",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_022_0.jpg",
+          "color": "",
+          "tag": "General"
+        },
+        {
+          "data": "images/page_3/prod_022_1.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Onion pink",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhtnwchm4b2edgav",
+      "name": "Budget Coord",
+      "productNumber": "023",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_023_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Teal green",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhtqm5wogq26vc0s",
+      "name": "Budget Coord",
+      "productNumber": "024",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_024_0.jpg",
+          "color": "",
+          "tag": "General"
+        },
+        {
+          "data": "images/page_3/prod_024_1.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Ink blue",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhubohxkmick4wr2",
+      "name": "Budget Coord",
+      "productNumber": "025",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_025_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Black",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhuir78tlede06b5",
+      "name": "Budget Coord",
+      "productNumber": "026",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_026_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Red",
+          "sizes": [
+            {
+              "size": "XL 42",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhulswiznxtlsg0z",
+      "name": "Budget Coord",
+      "productNumber": "027",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_027_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Maroon",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhuo7t7wyf83fthz",
+      "name": "Budget Coord",
+      "productNumber": "028",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_028_0.jpg",
+          "color": "",
+          "tag": "General"
+        },
+        {
+          "data": "images/page_3/prod_028_1.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Purple",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhuq3sfkkj4o1l6u",
+      "name": "Budget Coord",
+      "productNumber": "029",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_029_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Maroon",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhus4ep6dx7dlnbu",
+      "name": "Budget Coord",
+      "productNumber": "030",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_030_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Red",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhuv82n9c1tp8klq",
+      "name": "Budget Coord",
+      "productNumber": "031",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_031_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Purple",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhw5bet9ymlrsd20",
+      "name": "Budget Coord",
+      "productNumber": "032",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_032_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Purple",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhw6xo2wg7zlz37v",
+      "name": "Budget Coord",
+      "productNumber": "033",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_033_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Blue",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 450,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhw8d768oht653f7",
+      "name": "Budget Coord",
+      "productNumber": "034",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton mix",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_034_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Mehandi",
+          "sizes": [
+            {
+              "size": "XL 42",
+              "sellPrice": 450,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhwa6ev25nrabcvu",
+      "name": "Budget Coord",
+      "productNumber": "035",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_035_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Yellow",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 499,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 499,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 499,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhwbokjgbdknscef",
+      "name": "Budget Coord",
+      "productNumber": "036",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_036_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Purple",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 499,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqhwdcaaw5j42ubny",
+      "name": "Budget Coord",
+      "productNumber": "037",
+      "status": "active",
+      "categoryId": "mou6d0zs4bl8w31ya",
+      "categoryName": "Coord",
+      "description": "Rayon and cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_037_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Pastel blue",
+          "sizes": [
+            {
+              "size": "S 36",
+              "sellPrice": 499,
               "stock": 1
             }
           ]
