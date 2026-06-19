@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa",
   "tagline": "",
-  "lastUpdated": "2026-06-19T05:40:52.585Z",
+  "lastUpdated": "2026-06-19T05:42:36.488Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "",
@@ -288,53 +288,6 @@
             {
               "size": "S 36",
               "sellPrice": 870,
-              "stock": 0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mou7g1hyg8eoa2x3f",
-      "name": "Budget Coord",
-      "productNumber": 9,
-      "status": "active",
-      "categoryId": "mou6d0zs4bl8w31ya",
-      "categoryName": "Coord",
-      "description": "cotton , rayaon",
-      "tags": [
-        "Cotton mix rayon"
-      ],
-      "videoLink": "",
-      "photos": [
-        {
-          "data": "images/page_1/prod_009_0.jpg",
-          "color": "",
-          "tag": "General"
-        }
-      ],
-      "variants": [
-        {
-          "color": "Onion pink",
-          "sizes": [
-            {
-              "size": "M 38",
-              "sellPrice": 450,
-              "stock": 0
-            },
-            {
-              "size": "L 40",
-              "sellPrice": 450,
-              "stock": 1
-            },
-            {
-              "size": "XL 42",
-              "sellPrice": 450,
-              "stock": 0
-            },
-            {
-              "size": "XXL 44",
-              "sellPrice": 450,
               "stock": 0
             }
           ]
@@ -1056,7 +1009,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "images/page_2/prod_028_0.jpg",
+          "data": "images/page_1/prod_028_0.jpg",
           "color": "blue",
           "tag": "General"
         }
@@ -2017,7 +1970,7 @@
       "videoLink": "",
       "photos": [
         {
-          "data": "images/page_3/prod_019_0.jpg",
+          "data": "images/page_2/prod_019_0.jpg",
           "color": "",
           "tag": "General"
         }
