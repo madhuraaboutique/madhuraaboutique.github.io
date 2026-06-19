@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa",
   "tagline": "",
-  "lastUpdated": "2026-06-19T05:42:36.488Z",
+  "lastUpdated": "2026-06-19T12:18:46.539Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "",
@@ -2662,6 +2662,166 @@
               "size": "S 36",
               "sellPrice": 499,
               "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqkw61yebvqb5aldk",
+      "name": "Dhabu cotton 3pc set",
+      "productNumber": "038",
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_038_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Blue",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 899,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqkw7e6avn8mamy4b",
+      "name": "Dhabu cotton 3pc set",
+      "productNumber": "039",
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_039_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Maroon",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 899,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqkw8xt8w4oulj8w5",
+      "name": "Dhabu cotton 3pc set",
+      "productNumber": "040",
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_040_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Purple",
+          "sizes": [
+            {
+              "size": "L 40",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 899,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqkwagb2y4fg2hmn3",
+      "name": "Dhabu cotton 3pc set",
+      "productNumber": "041",
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_041_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Orange",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 899,
+              "stock": 0
             }
           ]
         }
