@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa",
   "tagline": "",
-  "lastUpdated": "2026-06-19T05:39:39.168Z",
+  "lastUpdated": "2026-06-19T05:40:52.585Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "",
@@ -2152,18 +2152,7 @@
           "tag": "General"
         }
       ],
-      "variants": [
-        {
-          "color": "Onion pink",
-          "sizes": [
-            {
-              "size": "L 40",
-              "sellPrice": 450,
-              "stock": 0
-            }
-          ]
-        }
-      ]
+      "variants": []
     },
     {
       "id": "mqhtnwchm4b2edgav",
