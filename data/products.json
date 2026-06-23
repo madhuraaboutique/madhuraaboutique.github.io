@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa",
   "tagline": "",
-  "lastUpdated": "2026-06-21T03:32:43.368Z",
+  "lastUpdated": "2026-06-23T05:51:51.268Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "",
@@ -2696,7 +2696,7 @@
             {
               "size": "XL 42",
               "sellPrice": 899,
-              "stock": 1
+              "stock": 0
             },
             {
               "size": "XXL 44",
