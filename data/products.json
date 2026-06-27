@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa",
   "tagline": "",
-  "lastUpdated": "2026-06-23T05:51:51.268Z",
+  "lastUpdated": "2026-06-27T02:22:47.184Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "",
@@ -2822,6 +2822,145 @@
               "size": "XL 42",
               "sellPrice": 899,
               "stock": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqrvamzhpqhj1i9qq",
+      "name": "Jaipur cotton 3pc set",
+      "productNumber": "042",
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_042_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mqrvbshby4sgh6tdc",
+      "name": "Jaipur cotton 3pc set",
+      "productNumber": "043",
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_3/prod_043_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Blue",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 950,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 950,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqrvf8pff951bcver",
+      "name": "Jaipur cotton 3pc set",
+      "productNumber": "044",
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_4/prod_044_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Brick red",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 899,
+              "stock": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mqrvitia9jzfl9fnv",
+      "name": "Jaipur cotton 3pc set",
+      "productNumber": "045",
+      "status": "active",
+      "categoryId": "mpy0x3lknwp8rh7i5",
+      "categoryName": "3 pcs set",
+      "description": "Cotton",
+      "tags": [],
+      "videoLink": "",
+      "photos": [
+        {
+          "data": "images/page_4/prod_045_0.jpg",
+          "color": "",
+          "tag": "General"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Yellow",
+          "sizes": [
+            {
+              "size": "M 38",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "L 40",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XL 42",
+              "sellPrice": 899,
+              "stock": 1
+            },
+            {
+              "size": "XXL 44",
+              "sellPrice": 899,
+              "stock": 1
             }
           ]
         }
