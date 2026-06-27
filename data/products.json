@@ -1,7 +1,7 @@
 {
   "shopName": "Madhuraa",
   "tagline": "",
-  "lastUpdated": "2026-06-27T02:22:47.184Z",
+  "lastUpdated": "2026-06-27T02:28:11.615Z",
   "settings": {
     "shopInitials": "MG",
     "phone": "",
@@ -218,7 +218,7 @@
             {
               "size": "XL",
               "sellPrice": 730,
-              "stock": 1
+              "stock": 0
             },
             {
               "size": "XXL",
@@ -1651,7 +1651,7 @@
       "photos": [
         {
           "data": "images/page_2/prod_011_0.jpg",
-          "color": "",
+          "color": "Rani pink",
           "tag": "General"
         }
       ],
@@ -1659,11 +1659,6 @@
         {
           "color": "Rani pink",
           "sizes": [
-            {
-              "size": "L 40",
-              "sellPrice": 1150,
-              "stock": 1
-            },
             {
               "size": "XL 42",
               "sellPrice": 1150,
@@ -1691,7 +1686,7 @@
       "photos": [
         {
           "data": "images/page_2/prod_012_0.jpg",
-          "color": "",
+          "color": "Blue",
           "tag": "General"
         }
       ],
